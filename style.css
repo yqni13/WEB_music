@@ -1,36 +1,5 @@
+@import url("icons.css");
+
 h1 {
     color: blue
-}
-
-.icon-Pause:before {
-    font-family: "Material Icons";
-    content:  "\e034";
-}
-.icon-Play:before {
-    font-family: "Material Icons";
-    content:  "\e037";
-}
-.icon-SkipNext:before {
-    font-family: "Material Icons";
-    content:  "\e044";
-}
-.icon-SkipPrevious:before {
-    font-family: "Material Icons";
-    content:  "\e045";
-}
-.icon-Repeat:before {
-    font-family: "Material Icons";
-    content:  "\e040";
-}
-.icon-Shuffle:before {
-    font-family: "Material Icons";
-    content:  "\e043";
-}
-.icon-VolumeOn:before {
-    font-family: "Material Icons";
-    content:  "\e050";
-}
-.icon-VolumeOff:before {
-    font-family: "Material Icons";
-    content:  "\e04f";
 }
