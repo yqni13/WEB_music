@@ -15,16 +15,17 @@
             <div class="container-active"></div>
         </div>
         <div class="container-tools">
-            <i class="icon-SkipPrevious"></i>
-            <i class="icon-Play"></i>
-            <i class="icon-Pause"></i>
-            <i class="icon-SkipNext"></i>
-            <i class="icon-Repeat"></i>
-            <i class="icon-Shuffle"></i>
-            <span>time process</span>
-            <i class="icon-VolumeOn"></i>
-            <i class="icon-VolumeOff"></i>
-            <span>volume process</span>
+            <i class="icon-SkipPrevious" onclick="musicSkipPrevious()"></i>
+            <i class="icon-Play" id="playbtn" onclick="musicPlaying()"></i>
+            <i class="icon-Pause" id="pausebtn" onclick="musicPausing()"></i>
+            <i class="icon-SkipNext" onclick="musicSkipNext()"></i>
+            <i class="icon-Repeat tools" id="repeatbtn" onclick="musicRepeating()"></i>
+            <i class="icon-Shuffle tools" id="shufflebtn" onclick="musicShuffling()"></i>
+            <input type="range" min="0" max="100" value="20" id="process"/>
+            <i class="icon-VolumeOn" id="volumeon"></i>
+            <i class="icon-VolumeOff" id="volumeoff"></i>
+            <input type="range" min="0" max="100" value="25" id="volume" oninput="volumeChange(this.value)"/>
+            
         </div>
     </div>
 
