@@ -1,5 +1,8 @@
-@import url("icons.css");
+@import url("stylesheets/icons.css");
+@import url("stylesheets/tools.css");
 
-h1 {
-    color: blue
+    
+:root {
+    --shuffle-color: #CC0066;
+    --repeat-color: #77B300;
 }
