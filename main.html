@@ -9,18 +9,18 @@
 </head>
 <body>
     <h1>Music Player, by yqni13</h1>
-    <div class="container-player">
-        <div class="container-details">
+    <div class="player">
+        <div class="details">
             <div class="container-list"></div>
             <div class="container-active"></div>
         </div>
-        <div class="container-tools">
+        <div class="tools">
             <i class="icon-SkipPrevious" onclick="musicSkipPrevious()"></i>
             <i class="icon-Play" id="playbtn" onclick="musicPlaying()"></i>
             <i class="icon-Pause" id="pausebtn" onclick="musicPausing()"></i>
             <i class="icon-SkipNext" onclick="musicSkipNext()"></i>
-            <i class="icon-Repeat tools" id="repeatbtn" onclick="musicRepeating()"></i>
-            <i class="icon-Shuffle tools" id="shufflebtn" onclick="musicShuffling()"></i>
+            <i class="icon-Repeat" id="repeatbtn" onclick="musicRepeating()"></i>
+            <i class="icon-Shuffle" id="shufflebtn" onclick="musicShuffling()"></i>
             <input type="range" min="0" max="100" value="20" id="process"/>
             <i class="icon-VolumeOn" id="volumeon"></i>
             <i class="icon-VolumeOff" id="volumeoff"></i>

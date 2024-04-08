@@ -6,3 +6,40 @@
     --shuffle-color: #CC0066;
     --repeat-color: #77B300;
 }
+
+body {
+    background-image: url("assets/grey_background.jpg");
+    position: center;
+}
+
+.player {
+    width:fit-content;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    margin: auto;
+    
+}
+
+.details {
+    width: 600px;
+    height: 300px;
+    border-style: solid;
+    border-width: medium;
+    border-color: var(--repeat-color);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.tools {
+    width: 600px;
+    height: 20px;
+    border-style: solid;
+    border-color: var(--shuffle-color);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+}
