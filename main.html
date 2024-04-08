@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/x-icon" href="assets/headphones_github.ico">
     <title>Simple Music Player</title>
 </head>
 <body>
-    <h1>Music Player, by yqni13</h1>
     <div class="player">
         <div class="details">
             <div class="container-list"></div>
@@ -19,12 +19,12 @@
             <i class="icon-Play" id="playbtn" onclick="musicPlaying()"></i>
             <i class="icon-Pause" id="pausebtn" onclick="musicPausing()"></i>
             <i class="icon-SkipNext" onclick="musicSkipNext()"></i>
-            <i class="icon-Repeat" id="repeatbtn" onclick="musicRepeating()"></i>
             <i class="icon-Shuffle" id="shufflebtn" onclick="musicShuffling()"></i>
-            <input type="range" min="0" max="100" value="20" id="process"/>
+            <i class="icon-Repeat" id="repeatbtn" onclick="musicRepeating()"></i>
+            <input class="slider" type="range" min="0" max="100" value="20" id="process"/>
             <i class="icon-VolumeOn" id="volumeon"></i>
             <i class="icon-VolumeOff" id="volumeoff"></i>
-            <input type="range" min="0" max="100" value="25" id="volume" oninput="volumeChange(this.value)"/>
+            <input class="slider" type="range" min="0" max="100" value="25" id="volume" oninput="volumeChange(this.value)"/>
             
         </div>
     </div>

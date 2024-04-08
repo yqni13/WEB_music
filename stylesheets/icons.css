@@ -1,5 +1,6 @@
 i {
     font-style: normal;
+    color:var(--btn-color);
 }
 
 .icon-Pause:before {

@@ -9,8 +9,7 @@ var volumeOff = document.getElementById("volumeoff");
 
 function initializePlayer() {
     pauseButton.style.display = "none";
-    shuffleButton.style.color = "initial"
-    repeatButton.style.color = "initial"
+    shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
     volumeOff.style.display = "none"
 }
 
@@ -36,12 +35,12 @@ function musicSkipNext() {
 
 function musicShuffling() {
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--shuffle-color');
-    repeatButton.style.color = "initial";
+    repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
 }
 
 function musicRepeating() {
     repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--repeat-color');
-    shuffleButton.style.color = "initial";
+    shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
 }
 
 function volumeChange(val) {

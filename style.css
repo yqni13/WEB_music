@@ -3,13 +3,25 @@
 
     
 :root {
-    --shuffle-color: #CC0066;
+    --shuffle-color: #00AAFF;
     --repeat-color: #77B300;
+    --btn-color: #E61291;
+    --slider-range-color: #ff96ab;
+    --slider-btn-color: #CCFFEE;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
-    background-image: url("assets/grey_background.jpg");
-    position: center;
+    background-image: url("assets/withBackground.svg");
+    background-color: #0d1117;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-content: center;
 }
 
 .player {
@@ -20,7 +32,6 @@ body {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     margin: auto;
-    
 }
 
 .details {
@@ -28,7 +39,7 @@ body {
     height: 300px;
     border-style: solid;
     border-width: medium;
-    border-color: var(--repeat-color);
+    border-color: grey;
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
@@ -38,8 +49,8 @@ body {
     width: 600px;
     height: 20px;
     border-style: solid;
-    border-color: var(--shuffle-color);
+    border-color: grey;
     border-radius: 5px;
     margin: 10px;
-    padding: 5px;
+    padding: 5px 5px 0px 5px;
 }
