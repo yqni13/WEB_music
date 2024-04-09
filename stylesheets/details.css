@@ -1,0 +1,30 @@
+
+.list {
+    width:63%;
+    height: 90%;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: red;
+    margin: 10px 10px 0px 10px;
+}
+
+.active {
+    width: 30%;
+    height: 90%;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: yellow;
+    margin: 10px 10px 0px 10px;
+    text-align: -webkit-center;
+}
+
+.thumbnail {
+    width: 53%;
+    height: 35%;
+    margin-top: 15%;
+    background-image: url("../assets/not_available.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+}
