@@ -49,5 +49,13 @@ input[type="range"]::-moz-range-thumb {
 
 /* slider styling end. */
 
+#process {
+    width: 62%;
+}
+
+#volume {
+    width: 15%;
+}
+
 /* TODO scale sliders to use full width of tools container */
 /* hint: use tables/grid structure? */
