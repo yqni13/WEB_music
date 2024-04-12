@@ -8,6 +8,19 @@
     margin: 10px 10px 0px 10px;
     overflow: scroll;
     scrollbar-width: none;
+
+    text-align: -webkit-center;
+}
+
+.selector {
+    width: 98%;
+    height: 98%;
+
+    color: transparent;
+    align-content: center;
+    text-align: end;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
 }
 
 .active {

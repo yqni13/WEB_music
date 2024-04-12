@@ -5,13 +5,14 @@ var shuffleButton = document.getElementById("shufflebtn");
 var repeatButton = document.getElementById("repeatbtn");
 var volumeOn = document.getElementById("volumeon");
 var volumeOff = document.getElementById("volumeoff");
+var filesSelected = false;
 
 
 function initializePlayer() {
     pauseButton.style.display = "none";
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
     volumeOff.style.display = "none"
-    addDemoList();
+    // addDemoList();
 }
 
 function addDemoList() {
@@ -22,6 +23,13 @@ function addDemoList() {
         entry.appendChild(document.createTextNode(text));
         list.appendChild(entry);
     }
+}
+
+function selectMusic() {
+    // logic for music selecting
+
+    // check if selected
+    this.filesSelected = true;
 }
 
 function musicPlaying() {
