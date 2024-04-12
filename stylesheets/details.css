@@ -6,6 +6,8 @@
     border-style: solid;
     border-color: red;
     margin: 10px 10px 0px 10px;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 .active {
@@ -27,4 +29,38 @@
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.7;
+    border-style: solid;
+    border-color: white;
+    border-radius: 2px;
+}
+
+.title {
+    color: white;
+    width: 53%;
+    border-style: solid;
+    border-color: white;
+    border-radius: 2px;
+    height: auto;
+    margin-top: 5%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow: hidden;
+}
+
+.title .songTitle {
+    white-space: nowrap;
+    max-width: none;
+    animation: songTitle 10s linear infinite;
+}
+
+/* infinite repeat of song title in details area */
+@keyframes songTitle {
+    0% {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
 }
