@@ -11,6 +11,17 @@ function initializePlayer() {
     pauseButton.style.display = "none";
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
     volumeOff.style.display = "none"
+    addDemoList();
+}
+
+function addDemoList() {
+    var list = document.getElementById("orderedList");
+    for(let i = 1;i<=20;i++) {
+        var entry = document.createElement('li');
+        var text = "demo element: " + i;
+        entry.appendChild(document.createTextNode(text));
+        list.appendChild(entry);
+    }
 }
 
 function musicPlaying() {
