@@ -9,18 +9,46 @@
     overflow: scroll;
     scrollbar-width: none;
 
+    padding-top: inherit;
     text-align: -webkit-center;
 }
 
 .selector {
     width: 98%;
     height: 98%;
-
     color: transparent;
     align-content: center;
-    text-align: end;
-    background: rgba(255, 255, 255, 0.25);
+    background: var(--glassoptic-color);
     border-radius: 5px;
+
+    position: relative;
+}
+
+input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    top:10px;
+    left: 8px;
+    font-size:10px;
+    color: #b8b8b8;
+}
+
+#upload {
+    visibility: hidden;
+}
+
+.button {
+    display: inline-block;
+    width:97%;
+    height: 96%;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border-style: dotted;
+    border-color: white;
+    background-color: var(--glassoptic-color);
+    font-size: 14px;
+    color: white;
 }
 
 .active {
@@ -30,6 +58,7 @@
     border-style: solid;
     border-color: yellow;
     margin: 10px 10px 0px 10px;
+    padding-top: inherit;
     text-align: -webkit-center;
 }
 
@@ -55,6 +84,8 @@
     border-radius: 2px;
     height: auto;
     margin-top: 5%;
+    font-size: 10px;
+    padding: 5px 0px;
 
     display: flex;
     flex-flow: row nowrap;

@@ -9,6 +9,7 @@
     --btn-color: #E61291;
     --slider-range-color: #ff96ab;
     --slider-btn-color: #CCFFEE;
+    --glassoptic-color: rgba(255, 255, 255, 0.25);
 }
 
 html, body {
@@ -23,6 +24,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     align-content: center;
+
+    /* TODO set global font-size? */
 }
 
 .player {
