@@ -4,7 +4,7 @@
     height: 90%;
     border-radius: 2px;
     border-style: solid;
-    border-color: var(--yqni13-purple);
+    border-color: transparent;
     margin: 10px 10px 0px 10px;
     overflow: scroll;
     scrollbar-width: none;
@@ -37,12 +37,12 @@ input[type="file"] {
 
 .button {
     display: inline-block;
-    width:97%;
-    height: 96%;
+    width:95%;
+    height: 94%;
     align-content: center;
     cursor: pointer;
     border-radius: 5px;
-    border-style: dotted;
+    border-style: outset;
     border-color: white;
     background-color: var(--glassoptic-color);
     font-size: 14px;
@@ -104,6 +104,10 @@ input[type="file"] {
     100% {
         transform: translate(-100%, 0);
     }
+}
+
+.clear {
+    visibility: hidden;
 }
 
 .clearLabel {
