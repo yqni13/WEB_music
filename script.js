@@ -5,13 +5,13 @@ var shuffleButton = document.getElementById("shufflebtn");
 var repeatButton = document.getElementById("repeatbtn");
 var volumeOn = document.getElementById("volumeon");
 var volumeOff = document.getElementById("volumeoff");
-var filesSelected = false;
 
 
 function initializePlayer() {
     pauseButton.style.display = "none";
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
     volumeOff.style.display = "none"
+
     // addDemoList();
 }
 
@@ -25,11 +25,42 @@ function addDemoList() {
     }
 }
 
+function removeAll() {
+    // TODO remove all displayed elements in list?
+
+    // set to empty FileList instead null value
+    document.getElementById("upload").files = new DataTransfer().files;
+
+    document.getElementById("selectorOverview").style.visibility = "visible";
+    document.getElementById("listOverview").style.borderColor = 'transparent';
+    document.getElementById("clearOverview").style.visibility = "hidden";
+}
+
+// TODO 
+// remove single songs
+// needs to be assigned dynamically to created elements
+function removeSingle(i) {
+    var files = Object.entries(document.getElementById("upload").files);
+    Object.entries(files.splice(i-1, 1));
+}
+
 function selectMusic() {
     // logic for music selecting
 
-    // check if selected
-    this.filesSelected = true;
+    var music = document.getElementById("upload").files;
+    var list = document.getElementById("listOverview");
+    var selector = document.getElementById("selectorOverview");
+    var removeAllBtn = document.getElementById("clearOverview");
+
+    if(music.length == 0) {
+        list.style.borderColor = 'transparent';
+        selector.style.visibility = "visible";
+        removeAllBtn.style.visibility = "hidden";
+    } else {
+        list.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--yqni13-purple');
+        selector.style.visibility = "hidden";
+        removeAllBtn.style.visibility = "visible";
+    }
 }
 
 function musicPlaying() {

@@ -11,10 +11,10 @@
 <body>
     <div class="player">
         <div class="details">
-            <div class="list">
-                <div class="selector">
+            <div class="list" id="listOverview">
+                <div class="selector" id="selectorOverview">
                     <label class="button" for="upload">select music</label>
-                    <input id="upload" type="file" multiple accept="audio/*">
+                    <input id="upload" type="file" multiple accept="audio/*" onchange="selectMusic()">
                 </div>
                 <div>
                     <ol id="orderedList">
@@ -28,9 +28,9 @@
                     <span class="songTitle">song #1 skf sklfjklsjldksjf -&nbsp;</span>
                     <span class="songTitle">song #1 skf sklfjklsjldksjf -&nbsp;</span>
                 </div>
-                <div class="clear">
+                <div class="clear" id="clearOverview">
                     <a class="clearLabel">clear list</a>
-                    <i class="icon-ClearList" onclick=""></i>
+                    <i class="icon-ClearList" onclick="removeAll()"></i>
                 </div>
             </div>
         </div>
