@@ -4,18 +4,16 @@
     height: 90%;
     border-radius: 2px;
     border-style: solid;
-    border-color: red;
+    border-color: var(--yqni13-purple);
     margin: 10px 10px 0px 10px;
     overflow: scroll;
     scrollbar-width: none;
-
-    padding-top: inherit;
     text-align: -webkit-center;
 }
 
 .selector {
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     color: transparent;
     align-content: center;
     background: var(--glassoptic-color);
@@ -56,9 +54,8 @@ input[type="file"] {
     height: 90%;
     border-radius: 2px;
     border-style: solid;
-    border-color: yellow;
+    border-color: var(--yqni13-pink);
     margin: 10px 10px 0px 10px;
-    padding-top: inherit;
     text-align: -webkit-center;
 }
 
@@ -107,4 +104,13 @@ input[type="file"] {
     100% {
         transform: translate(-100%, 0);
     }
+}
+
+.clearLabel {
+    color: white;
+    font-size:10px;
+}
+
+.clear i {
+    vertical-align: sub;
 }

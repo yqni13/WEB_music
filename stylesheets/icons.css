@@ -35,3 +35,11 @@ i {
     font-family: "Material Icons";
     content:  "\e04f";
 }
+.icon-RemoveSong:before {
+    font-family: "Material Icons";
+    content:  "\e872";
+}
+.icon-ClearList:before {
+    font-family: "Material Icons";
+    content:  "\e5cd";
+}
