@@ -46,7 +46,7 @@ input[type="file"] {
     border-color: white;
     background-color: var(--glassoptic-color);
     font-size: 14px;
-    color: white;
+    color: rgba(255, 255, 255, 0.76);
 }
 
 .active {
