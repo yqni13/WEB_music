@@ -16,7 +16,7 @@ function initializePlayer() {
 }
 
 function addDemoList() {
-    var list = document.getElementById("orderedList");
+    var list = document.getElementById("musicList");
     for(let i = 1;i<=20;i++) {
         var entry = document.createElement('li');
         var text = "demo element: " + i;
@@ -32,6 +32,7 @@ function removeAll() {
     document.getElementById("upload").files = new DataTransfer().files;
 
     document.getElementById("selectorOverview").style.visibility = "visible";
+    document.getElementById("selectorOverview").style.height = "100%";
     document.getElementById("listOverview").style.borderColor = 'transparent';
     document.getElementById("clearOverview").style.visibility = "hidden";
 }
@@ -59,8 +60,13 @@ function selectMusic() {
     } else {
         list.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--yqni13-purple');
         selector.style.visibility = "hidden";
+        selector.style.height = "0%"
         removeAllBtn.style.visibility = "visible";
     }
+}
+
+function createMusicElement() {
+    var element = document.createElement("li");
 }
 
 function musicPlaying() {

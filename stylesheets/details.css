@@ -11,6 +11,21 @@
     text-align: -webkit-center;
 }
 
+#musicList {
+    display: flex;
+    text-align: start;
+    padding: 5px;
+}
+
+#musicList i {
+    padding: 2px;
+}
+
+#musicList a {
+    color: grey;
+    width: -webkit-fill-available;
+}
+
 .selector {
     width: 100%;
     height: 100%;

@@ -43,3 +43,11 @@ i {
     font-family: "Material Icons";
     content:  "\e5cd";
 }
+.icon-DragIndicator:before {
+    font-family: "Material Icons";
+    content: "\e945";
+}
+.icon-TrashBin:before {
+    font-family: "Material Icons";
+    content: "\e872";
+}
