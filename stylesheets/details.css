@@ -57,6 +57,7 @@ input[type="file"] {
     border-color: var(--yqni13-pink);
     margin: 10px 10px 0px 10px;
     text-align: -webkit-center;
+    position: relative;
 }
 
 .thumbnail {
@@ -108,11 +109,14 @@ input[type="file"] {
 
 .clear {
     visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .clearLabel {
     color: white;
-    font-size:10px;
+    font-size:14px;
 }
 
 .clear i {
