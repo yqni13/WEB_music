@@ -12,7 +12,6 @@
 }
 
 #musicList {
-    display: flex;
     text-align: start;
     padding: 5px;
 }
@@ -24,6 +23,7 @@
 #musicList a {
     color: grey;
     width: -webkit-fill-available;
+    padding-top: 0.5px;
 }
 
 .selector {
@@ -93,7 +93,7 @@ input[type="file"] {
     color: white;
     width: 53%;
     border-style: solid;
-    border-color: white;
+    border-color: var(--glassoptic-color);
     border-radius: 2px;
     height: auto;
     margin-top: 5%;

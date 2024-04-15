@@ -65,4 +65,14 @@ body {
 
 li {
     color: white;
+    border-style: solid;
+    border-color: var(--glassoptic-color);
+    border-radius: 2px;
+    margin: 3px 0px;
+    padding-top: 3px;
+    display: flex;
+}
+
+li i {
+    height: 18px;
 }
