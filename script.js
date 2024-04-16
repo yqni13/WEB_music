@@ -73,27 +73,45 @@ function removeSingle(i) {
 }
 
 function selectMusic() {
-    // logic for music selecting
-
     var music = document.getElementById("upload").files;
     var list = document.getElementById("listOverview");
     var selector = document.getElementById("selectorOverview");
     var removeAllBtn = document.getElementById("clearOverview");
+    var activeList = document.getElementById("musicList");
 
     if(music.length == 0) {
         list.style.borderColor = 'transparent';
         selector.style.visibility = "visible";
-        removeAllBtn.style.visibility = "hidden";
+        removeAllBtn.style.visibility = "hidden";        
     } else {
         list.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--yqni13-purple');
         selector.style.visibility = "hidden";
         selector.style.height = "0%"
         removeAllBtn.style.visibility = "visible";
     }
+
+    createMusicListElements(Object.entries(music), activeList);    
 }
 
-function createMusicElement() {
-    var element = document.createElement("li");
+function createMusicListElements(entries, activeList) {
+    for(let i = 0; i < entries.length; i++) {
+        var li = document.createElement("li");
+        var iDrag = document.createElement("i");
+        var title = document.createElement("a");
+        var iRemove = document.createElement("i");
+
+        li.draggable = true;
+
+        li.setAttribute("ondragover", "dragOver(event)");
+        li.setAttribute("ondragstart", "dragStart(event)");
+
+        iDrag.setAttribute("class", "icon-DragIndicator"); 
+        title.innerHTML = entries[i][1]["name"].substring(-1, entries[i][1]["name"].indexOf('.'))
+        iRemove.setAttribute("class", "icon-TrashBin");
+
+        li.append(iDrag, title, iRemove)
+        activeList.appendChild(li);
+    }
 }
 
 function musicPlaying() {
