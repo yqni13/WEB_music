@@ -53,7 +53,10 @@ function isBefore(el1, el2) {
 /*-----------------------------------------------------------------------------------------------------------*/
 
 function removeAll() {
-    // TODO remove all displayed elements in list?
+    var musicList = document.getElementById("musicList");
+    for(let i = 0; i < document.getElementById("upload").files.length; i++) {
+        musicList.removeChild(musicList.firstElementChild);
+    }
 
     // set to empty FileList instead null value
     document.getElementById("upload").files = new DataTransfer().files;
@@ -90,7 +93,8 @@ function selectMusic() {
         removeAllBtn.style.visibility = "visible";
     }
 
-    createMusicListElements(Object.entries(music), activeList);    
+    createMusicListElements(Object.entries(music), activeList);
+    console.log("music: ", document.getElementById("upload").files)
 }
 
 function createMusicListElements(entries, activeList) {
