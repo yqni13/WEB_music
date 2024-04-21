@@ -58,7 +58,7 @@ input[type="file"] {
     cursor: pointer;
     border-radius: 5px;
     border-style: outset;
-    border-color: white;
+    border-color: var(--ghost-white);
     background-color: var(--glassoptic-color);
     font-size: 14px;
     color: rgba(255, 255, 255, 0.76);
@@ -85,12 +85,12 @@ input[type="file"] {
     background-position: center;
     opacity: 0.7;
     border-style: solid;
-    border-color: white;
+    border-color: var(--ghost-white);
     border-radius: 2px;
 }
 
 .title {
-    color: white;
+    color: var(--ghost-white);
     width: 53%;
     border-style: solid;
     border-color: var(--glassoptic-color);
@@ -130,7 +130,7 @@ input[type="file"] {
 }
 
 .clearLabel {
-    color: white;
+    color: var(--ghost-white);
     font-size:14px;
 }
 
