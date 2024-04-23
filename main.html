@@ -13,8 +13,8 @@
         <div class="details">
             <div class="list" id="listOverview">
                 <div class="selector" id="selectorOverview">
-                    <label class="button" for="upload">select music</label>
-                    <input id="upload" type="file" multiple accept="audio/*" onchange="selectMusic()">
+                    <label class="button" for="upload">select music folder</label>
+                    <input id="upload" type="file" multiple accept="audio/*" onchange="selectMusic()" webkitdirectory="">
                 </div>
                 <ul id="musicList">
                     <!-- dynamically loaded after selecting music -->
