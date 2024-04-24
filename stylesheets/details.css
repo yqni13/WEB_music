@@ -4,10 +4,64 @@
     height: 90%;
     border-radius: 2px;
     border-style: solid;
-    border-color: red;
+    border-color: transparent;
     margin: 10px 10px 0px 10px;
     overflow: scroll;
     scrollbar-width: none;
+    text-align: -webkit-center;
+}
+
+#musicList {
+    text-align: start;
+    padding: 5px;
+}
+
+#musicList i {
+    padding: 2px;
+}
+
+#musicList a {
+    color: grey;
+    width: -webkit-fill-available;
+    padding-top: 0.5px;
+}
+
+.selector {
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    align-content: center;
+    background: var(--glassoptic-color);
+    border-radius: 5px;
+
+    position: relative;
+}
+
+input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    top:10px;
+    left: 8px;
+    font-size:10px;
+    color: #b8b8b8;
+}
+
+#upload {
+    visibility: hidden;
+}
+
+.button {
+    display: inline-block;
+    width:95%;
+    height: 94%;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border-style: outset;
+    border-color: var(--ghost-white);
+    background-color: var(--glassoptic-color);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.76);
 }
 
 .active {
@@ -15,9 +69,10 @@
     height: 90%;
     border-radius: 2px;
     border-style: solid;
-    border-color: yellow;
+    border-color: var(--yqni13-pink);
     margin: 10px 10px 0px 10px;
     text-align: -webkit-center;
+    position: relative;
 }
 
 .thumbnail {
@@ -30,18 +85,20 @@
     background-position: center;
     opacity: 0.7;
     border-style: solid;
-    border-color: white;
+    border-color: var(--ghost-white);
     border-radius: 2px;
 }
 
 .title {
-    color: white;
+    color: var(--ghost-white);
     width: 53%;
     border-style: solid;
-    border-color: white;
+    border-color: var(--glassoptic-color);
     border-radius: 2px;
     height: auto;
     margin-top: 5%;
+    font-size: 10px;
+    padding: 5px 0px;
 
     display: flex;
     flex-flow: row nowrap;
@@ -63,4 +120,20 @@
     100% {
         transform: translate(-100%, 0);
     }
+}
+
+.clear {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.clearLabel {
+    color: var(--ghost-white);
+    font-size:14px;
+}
+
+.clear i {
+    vertical-align: sub;
 }
