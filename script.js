@@ -4,37 +4,9 @@ var music = [];
 function initializePlayer() {
     pauseButton.style.display = "none";
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
-    volumeOff.style.display = "none"
-    
+    volumeOff.style.display = "none"    
 
 }
-
-/*-----------------------------------------------------------------------------------------------------------*/
-
-// var _el;
-
-// function dragOver(e) {
-//   if (isBefore(_el, e.target))
-//     e.target.parentNode.insertBefore(_el, e.target);
-//   else
-//     e.target.parentNode.insertBefore(_el, e.target.nextSibling);
-// }
-
-// function dragStart(e) {
-//   e.dataTransfer.effectAllowed = "move";
-//   e.dataTransfer.setData("text/plain", null);
-//   _el = e.target;
-// }
-
-// function isBefore(el1, el2) {
-//   if (el2.parentNode === el1.parentNode)
-//     for (var cur = el1.previousSibling; cur && cur.nodeType !== 9; cur = cur.previousSibling)
-//       if (cur === el2)
-//         return true;
-//   return false;
-// }
-
-/*-----------------------------------------------------------------------------------------------------------*/
 
 function removeAll() {
     var musicList = document.getElementById("musicList");
@@ -93,10 +65,6 @@ function createMusicListElements(musicElements, activeList) {
         var title = document.createElement("a");
         var iRemove = document.createElement("i");
 
-        // li.draggable = true;
-        // li.setAttribute("ondragover", "dragOver(event)");
-        // li.setAttribute("ondragstart", "dragStart(event)");
-
         li.setAttribute("onclick", `preSelectedTitle(${musicElements[i].number})`);
         li.setAttribute("ondblclick", `dblClickDemo(${musicElements[i].number})`);
         li.setAttribute("id", `title${musicElements[i].number}`)
@@ -104,7 +72,7 @@ function createMusicListElements(musicElements, activeList) {
         source.src = musicElements[i].source
         audio.setAttribute("id", `audio${musicElements[i].number}`)
 
-        iDrag.setAttribute("class", "icon-DragIndicator"); 
+        iDrag.setAttribute("class", "icon-MusicNote"); 
         title.innerHTML = musicElements[i].name.substring(-1, musicElements[i].name.indexOf('.'));
         iRemove.setAttribute("class", "icon-TrashBin");
 
