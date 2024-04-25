@@ -37,20 +37,17 @@
     position: relative;
 }
 
-input[type="file"] {
+#btn {
     position: absolute;
     z-index: -1;
     top:10px;
     left: 8px;
     font-size:10px;
     color: #b8b8b8;
-}
-
-#upload {
     visibility: hidden;
 }
 
-.button {
+.btnlabel {
     display: inline-block;
     width:95%;
     height: 94%;
@@ -75,7 +72,7 @@ input[type="file"] {
     position: relative;
 }
 
-.thumbnail {
+#thumbnail {
     width: 53%;
     height: 35%;
     margin-top: 15%;

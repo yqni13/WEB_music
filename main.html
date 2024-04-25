@@ -13,22 +13,26 @@
         <div class="details">
             <div class="list" id="listOverview">
                 <div class="selector" id="selectorOverview">
-                    <label class="button" for="upload">select music folder</label>
-                    <input id="upload" type="file" multiple accept="audio/*" onchange="selectMusic()" webkitdirectory="">
+                    <label class="btnlabel" for="btn">load music from local path</label>
+                    <button id="btn" onclick="loadMusic()">
                 </div>
                 <ul id="musicList">
                     <!-- dynamically loaded after selecting music -->
                 </ul>                    
             </div>
             <div class="active">
-                <div class="thumbnail"></div>
+                <div id="thumbnail"></div>
                 <div class="title">
-                    <span class="songTitle">Skeler - Night Drive - Part III Phonk&Wave |&nbsp;</span>
-                    <span class="songTitle">Skeler - Night Drive - Part III Phonk&Wave |&nbsp;</span>
+                    <span class="songTitle" id="songTitle1">no music selected |&nbsp;</span>
+                    <span class="songTitle" id="songTitle2">no music selected |&nbsp;</span>
                 </div>
-                <div class="clear" id="clearOverview" >
-                    <a class="clearLabel" onclick="removeAll()">clear list</a>
-                    <i class="icon-ClearList" onclick="removeAll()"></i>
+                <div class="song-data">
+                    <p id="playing-time"></p>
+                    <p id="song-number"></p>
+                </div>
+                <div class="clear" id="clearOverview" onclick="removeAll()">
+                    <a class="clearLabel">clear list</a>
+                    <i class="icon-ClearList"></i>
                 </div>
             </div>
         </div>
@@ -42,10 +46,11 @@
             <input class="slider" type="range" min="0" max="100" value="20" id="process"/>
             <i class="icon-VolumeOn" id="volumeon"></i>
             <i class="icon-VolumeOff" id="volumeoff"></i>
-            <input class="slider" type="range" min="0" max="100" value="25" id="volume" oninput="volumeChange(this.value)"/>            
+            <input class="slider" type="range" min="0" max="100" value="100" id="volume" oninput="changeVolumeSymbol(this.value)"/>            
         </div>
     </div>
 
+    <script src="music.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -43,9 +43,9 @@ i {
     font-family: "Material Icons";
     content:  "\e5cd";
 }
-.icon-DragIndicator:before {
+.icon-MusicNote:before {
     font-family: "Material Icons";
-    content: "\e945";
+    content: "\e405";
 }
 .icon-TrashBin:before {
     font-family: "Material Icons";
