@@ -85,6 +85,7 @@ var volumeSlider = document.getElementById("volume");
 var displayedThumbnail = document.getElementById("thumbnail");
 var displayedTitle1 = document.getElementById("songTitle1")
 var displayedTitle2 = document.getElementById("songTitle2")
+var musicPlaylist = [];
 var currentSongNumber = 0;
 
 function musicPlaying(musicNumber = currentSongNumber) {
@@ -94,6 +95,7 @@ function musicPlaying(musicNumber = currentSongNumber) {
     pauseButton.style.display = "inline"    
 
     var song = document.getElementById(`audio${musicNumber}`)
+    song.load();
     song.play();
     updateVolume(song);
     
@@ -119,14 +121,15 @@ function resetSongPlayTime(musicNumber) {
     song.currentTime = 0;
 }
 
-function musicSkipPrevious() {
+function musicPrevious() {
     // TODO
     // go back to song previous in list
 }
 
-function musicSkipNext() {
+function musicNext() {
     // TODO
     // go forward to song next in list
+    musicPlaying()
 }
 
 function musicShuffling() {
@@ -138,6 +141,15 @@ function musicShuffling() {
 function musicRepeating() {
     repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--repeat-color');
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
+
+    for(let i = 0; i < musicPlaylist.length; i++) {
+        var song = document.getElementById(`audio${i}`);
+        song.setAttribute("autoplay", "true");
+        song.onended = musicPlaying((i === musicPlaylist.length-1) ? 0 : i+1);
+        // song.addEventListener("ended", ()=> {
+        //     musicNext();
+        // })
+    }
 }
 
 function changeVolumeSymbol(val) {

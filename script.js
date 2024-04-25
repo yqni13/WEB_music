@@ -5,7 +5,6 @@ function initializePlayer() {
     pauseButton.style.display = "none";
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
     volumeOff.style.display = "none"    
-
 }
 
 function removeAll() {
@@ -18,6 +17,7 @@ function removeAll() {
     }
 
     music = [];
+    musicPlaylist = [];
 
     document.getElementById("selectorOverview").style.visibility = "visible";
     document.getElementById("selectorOverview").style.height = "100%";
@@ -54,6 +54,10 @@ function loadMusic() {
     }
 
     createMusicListElements(music, activeList);
+    musicRepeating();
+
+    console.log("music playlist: ", musicPlaylist);
+    console.log("music object: ", music);
 }
 
 function createMusicListElements(musicElements, activeList) {
@@ -79,7 +83,9 @@ function createMusicListElements(musicElements, activeList) {
         audio.append(source);
         li.append(audio, iDrag, title, iRemove)
         activeList.appendChild(li);
-    }
+
+        musicPlaylist.push(audio);
+    }    
 }
 
 function preSelectedTitle(selectedNumber) {

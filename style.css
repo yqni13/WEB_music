@@ -36,8 +36,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     align-content: center;
-    cursor: default;
 
+    cursor: default;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     /* TODO set global font-size? */
 }
 
