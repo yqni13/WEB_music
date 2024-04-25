@@ -79,6 +79,7 @@ var shuffleButton = document.getElementById("shufflebtn");
 var repeatButton = document.getElementById("repeatbtn");
 var volumeOn = document.getElementById("volumeon");
 var volumeOff = document.getElementById("volumeoff");
+var volumeSlider = document.getElementById("volume");
 // var displayedTime = document.getElementById("playing-time");
 // var displayedNumber = document.getElementById("song-number");
 var displayedThumbnail = document.getElementById("thumbnail");
@@ -94,14 +95,18 @@ function musicPlaying(musicNumber = currentSongNumber) {
 
     var song = document.getElementById(`audio${musicNumber}`)
     song.play();
-
+    updateVolume(song);
+    
+    
     // time - see github repository => addEventListener("timeupdate")
+    var title = document.getElementById(`title${musicNumber}`).getElementsByTagName('a')[0];
+    title.style.color = getComputedStyle(document.documentElement).getPropertyValue('--slider-range-color')
     displayedThumbnail.style.backgroundImage = 'url(' + music[musicNumber].thumbnail + ')';
     displayedTitle1.innerHTML = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
     displayedTitle2.innerHTML = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
 }
 
-function musicPausing(musicNumber = 0) {
+function musicPausing() {
     playButton.style.display = "inline";
     pauseButton.style.display = "none";
 
@@ -127,6 +132,7 @@ function musicSkipNext() {
 function musicShuffling() {
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--shuffle-color');
     repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
+
 }
 
 function musicRepeating() {
@@ -134,7 +140,7 @@ function musicRepeating() {
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
 }
 
-function volumeChange(val) {
+function changeVolumeSymbol(val) {
     if(val == 0) {
         volumeOff.style.display = "inline";
         volumeOn.style.display = "none";
@@ -144,4 +150,10 @@ function volumeChange(val) {
             volumeOn.style.display = "inline";
         }
     }
+}
+
+function updateVolume(song) {
+    volumeSlider.addEventListener("input", (e) => {
+        song.volume = e.currentTarget.value/100;
+    })
 }

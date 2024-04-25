@@ -5,6 +5,7 @@ function initializePlayer() {
     pauseButton.style.display = "none";
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
     volumeOff.style.display = "none"
+    
 
 }
 
@@ -50,6 +51,8 @@ function removeAll() {
     document.getElementById("selectorOverview").style.height = "100%";
     document.getElementById("listOverview").style.borderColor = 'transparent';
     document.getElementById("clearOverview").style.visibility = "hidden";
+    shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
+    repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
 }
 
 // TODO 
@@ -112,7 +115,7 @@ function createMusicListElements(musicElements, activeList) {
 }
 
 function preSelectedTitle(selectedNumber) {
-    resetSelectedElementStyle();
+    resetSelectedElementStyle(false);
 
     var selectedTitle = document.getElementById(`title${selectedNumber}`);
     selectedTitle.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--ivory-white');
@@ -120,18 +123,20 @@ function preSelectedTitle(selectedNumber) {
 }
 
 function dblClickDemo(musicNumber) {
-    resetSelectedElementStyle();
+    resetSelectedElementStyle(true);
 
-    musicPausing(musicNumber);
+    musicPausing();
     resetSongPlayTime(currentSongNumber);
     musicPlaying(musicNumber);
 }
 
-function resetSelectedElementStyle() {
+function resetSelectedElementStyle(changeSong) {
     for(let i = 0; i < music.length; i++) {
         var musicElement = document.getElementById(`title${i}`);
+        var title = musicElement.getElementsByTagName('a')[0];
         musicElement.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--glassoptic-color');
         musicElement.style.backgroundColor = "transparent";
+        if(changeSong) title.style.color = "grey";
     }
 }
 
