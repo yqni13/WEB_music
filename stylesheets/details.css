@@ -119,6 +119,25 @@
     }
 }
 
+.song-data {
+    display: inline-block;
+    width: var(--detail-width);
+    font-size: 9px;
+}
+
+.time {
+    color: var(--ghost-white);
+    font-size: 9px;
+}
+
+#playing-time {
+    float: left;
+}
+
+#duration-time {
+    float: right;
+}
+
 .clear {
     visibility: hidden;
     position: absolute;

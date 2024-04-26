@@ -53,6 +53,9 @@ function loadMusic() {
     }
 
     createMusicListElements(music, activeList);
+    loadSong();
+    musicPlaying();
+    musicRepeating();
 }
 
 function createMusicListElements(musicElements, activeList) {
