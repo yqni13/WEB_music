@@ -17,7 +17,6 @@ function removeAll() {
     }
 
     music = [];
-    musicPlaylist = [];
 
     document.getElementById("selectorOverview").style.visibility = "visible";
     document.getElementById("selectorOverview").style.height = "100%";
@@ -54,17 +53,11 @@ function loadMusic() {
     }
 
     createMusicListElements(music, activeList);
-    musicRepeating();
-
-    console.log("music playlist: ", musicPlaylist);
-    console.log("music object: ", music);
 }
 
 function createMusicListElements(musicElements, activeList) {
     for(let i = 0; i < musicElements.length; i++) {        
         var li = document.createElement("li");
-        var audio = document.createElement("audio");
-        var source = document.createElement("source");
         var iDrag = document.createElement("i");
         var title = document.createElement("a");
         var iRemove = document.createElement("i");
@@ -73,18 +66,12 @@ function createMusicListElements(musicElements, activeList) {
         li.setAttribute("ondblclick", `dblClickDemo(${musicElements[i].number})`);
         li.setAttribute("id", `title${musicElements[i].number}`)
 
-        source.src = musicElements[i].source
-        audio.setAttribute("id", `audio${musicElements[i].number}`)
-
         iDrag.setAttribute("class", "icon-MusicNote"); 
         title.innerHTML = musicElements[i].name.substring(-1, musicElements[i].name.indexOf('.'));
         iRemove.setAttribute("class", "icon-TrashBin");
 
-        audio.append(source);
-        li.append(audio, iDrag, title, iRemove)
+        li.append(iDrag, title, iRemove)
         activeList.appendChild(li);
-
-        musicPlaylist.push(audio);
     }    
 }
 
@@ -100,7 +87,8 @@ function dblClickDemo(musicNumber) {
     resetSelectedElementStyle(true);
 
     musicPausing();
-    resetSongPlayTime(currentSongNumber);
+    loadSong(musicNumber);
+    resetSongPlayTime();
     musicPlaying(musicNumber);
 }
 
