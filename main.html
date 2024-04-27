@@ -6,16 +6,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="icon" type="image/x-icon" href="assets/headphones_github.ico">
-    <title>Simple Music Player</title>
+    <title id="browser-title"></title>
 </head>
 <body>
     <div class="player">
         <div class="details">
             <div class="list" id="listOverview">
                 <div class="selector" id="selectorOverview">
-                    <label class="btnlabel" for="btn">load music from local path</label>
+                    <label class="btnlabel" for="btn">load pre-defined music</label>
                     <button id="btn" onclick="loadMusic()">
                 </div>
+                <audio id="currentAudio" src=""></audio>
                 <ul id="musicList">
                     <!-- dynamically loaded after selecting music -->
                 </ul>                    
@@ -27,8 +28,8 @@
                     <span class="songTitle" id="songTitle2">no music selected |&nbsp;</span>
                 </div>
                 <div class="song-data">
-                    <p id="playing-time"></p>
-                    <p id="song-number"></p>
+                    <span class="time" id="playing-time"></span>
+                    <span class="time" id="duration-time"></span>
                 </div>
                 <div class="clear" id="clearOverview" onclick="removeAll()">
                     <a class="clearLabel">clear list</a>
@@ -37,16 +38,16 @@
             </div>
         </div>
         <div class="tools">
-            <i class="icon-SkipPrevious" onclick="musicSkipPrevious()"></i>
-            <i class="icon-Play" id="playbtn" onclick="musicPlaying()"></i>
-            <i class="icon-Pause" id="pausebtn" onclick="musicPausing()"></i>
-            <i class="icon-SkipNext" onclick="musicSkipNext()"></i>
+            <i class="icon-SkipPrevious" onclick="musicPrevious()"></i>
+            <i class="icon-Play" id="playbtn" onclick="musicPlay()"></i>
+            <i class="icon-Pause" id="pausebtn" onclick="musicPause()"></i>
+            <i class="icon-SkipNext" onclick="musicNext()"></i>
             <i class="icon-Shuffle" id="shufflebtn" onclick="musicShuffling()"></i>
             <i class="icon-Repeat" id="repeatbtn" onclick="musicRepeating()"></i>
-            <input class="slider" type="range" min="0" max="100" value="20" id="process"/>
+            <input class="slider" type="range" min="0" max="100" id="progress" oninput="updateSongProgress(this.value)"/>
             <i class="icon-VolumeOn" id="volumeon"></i>
             <i class="icon-VolumeOff" id="volumeoff"></i>
-            <input class="slider" type="range" min="0" max="100" value="100" id="volume" oninput="changeVolumeSymbol(this.value)"/>            
+            <input class="slider" type="range" min="0" max="100" value="50" id="volume" oninput="changeVolumeSymbol(this.value)"/>            
         </div>
     </div>
 

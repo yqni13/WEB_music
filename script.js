@@ -1,11 +1,12 @@
 
+var user = "yqni13";
 var music = [];
 
 function initializePlayer() {
+    document.getElementById("browser-title").innerHTML = `${user} music player`;
     pauseButton.style.display = "none";
-    shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
-    volumeOff.style.display = "none"    
-
+    document.getElementById("progress").value = 0;
+    volumeOff.style.display = "none"
 }
 
 function removeAll() {
@@ -18,6 +19,7 @@ function removeAll() {
     }
 
     music = [];
+    resetPlayer();
 
     document.getElementById("selectorOverview").style.visibility = "visible";
     document.getElementById("selectorOverview").style.height = "100%";
@@ -27,20 +29,11 @@ function removeAll() {
     repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
 }
 
-// TODO 
-// remove single songs
-// needs to be assigned dynamically to created elements
-function removeSingle(i) {
-    var files = Object.entries(document.getElementById("upload").files);
-    Object.entries(files.splice(i-1, 1));
-}
-
 function loadMusic() {
     music = musicDB;
     var list = document.getElementById("listOverview");
     var selector = document.getElementById("selectorOverview");
     var removeAllBtn = document.getElementById("clearOverview");
-    var activeList = document.getElementById("musicList");
 
     if(music.length == 0) {
         list.style.borderColor = 'transparent';
@@ -51,16 +44,19 @@ function loadMusic() {
         selector.style.visibility = "hidden";
         selector.style.height = "0%"
         removeAllBtn.style.visibility = "visible";
+        displayedTime.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ghost-white');
+        displayedDuration.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ghost-white');
+        createMusicListElements(music);
+        loadSong(0);
+        musicPlay();
+        musicRepeating();
     }
 
-    createMusicListElements(music, activeList);
 }
 
-function createMusicListElements(musicElements, activeList) {
+function createMusicListElements(musicElements) {
     for(let i = 0; i < musicElements.length; i++) {        
         var li = document.createElement("li");
-        var audio = document.createElement("audio");
-        var source = document.createElement("source");
         var iDrag = document.createElement("i");
         var title = document.createElement("a");
         var iRemove = document.createElement("i");
@@ -69,22 +65,17 @@ function createMusicListElements(musicElements, activeList) {
         li.setAttribute("ondblclick", `dblClickDemo(${musicElements[i].number})`);
         li.setAttribute("id", `title${musicElements[i].number}`)
 
-        source.src = musicElements[i].source
-        audio.setAttribute("id", `audio${musicElements[i].number}`)
-
         iDrag.setAttribute("class", "icon-MusicNote"); 
         title.innerHTML = musicElements[i].name.substring(-1, musicElements[i].name.indexOf('.'));
         iRemove.setAttribute("class", "icon-TrashBin");
 
-        audio.append(source);
-        li.append(audio, iDrag, title, iRemove)
-        activeList.appendChild(li);
-    }
+        li.append(iDrag, title, iRemove)
+        document.getElementById("musicList").appendChild(li);
+    }    
 }
 
 function preSelectedTitle(selectedNumber) {
     resetSelectedElementStyle(false);
-
     var selectedTitle = document.getElementById(`title${selectedNumber}`);
     selectedTitle.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--ivory-white');
     selectedTitle.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--glassoptic-color');
@@ -92,10 +83,9 @@ function preSelectedTitle(selectedNumber) {
 
 function dblClickDemo(musicNumber) {
     resetSelectedElementStyle(true);
-
-    musicPausing();
-    resetSongPlayTime(currentSongNumber);
-    musicPlaying(musicNumber);
+    musicPause();
+    loadSong(musicNumber);
+    musicPlay(musicNumber);
 }
 
 function resetSelectedElementStyle(changeSong) {
@@ -107,6 +97,5 @@ function resetSelectedElementStyle(changeSong) {
         if(changeSong) title.style.color = "grey";
     }
 }
-
 
 initializePlayer();

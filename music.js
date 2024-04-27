@@ -42,35 +42,7 @@ const musicDB = [
         type: "audio/mpeg",
         thumbnail: "./assets/demo-thumbnail/music5.jpg",
         source: "./assets/demo-music/Sea Of Problems.mp3"
-    },
-    {
-        number: 6,
-        name: "Skeler - In My Mind.mp3",
-        type: "audio/mpeg",
-        thumbnail: "./assets/demo-thumbnail/music6.jpg",
-        source: "./assets/demo-music/Skeler - In My Mind.mp3"
-    },
-    {
-        number: 7,
-        name: "Taras Stanin - Creepin - The Weeknd Beatbox Cover.mp3",
-        type: "audio/mpeg",
-        thumbnail: "./assets/demo-thumbnail/music7.jpg",
-        source: "./assets/demo-music/Taras Stanin - Creepin - The Weeknd Beatbox Cover.mp3"
-    },
-    {
-        number: 8,
-        name: "Teddy Swims - Lose Control.mp3",
-        type: "audio/mpeg",
-        thumbnail: "./assets/demo-thumbnail/music8.jpg",
-        source: "./assets/demo-music/Teddy Swims - Lose Control.mp3"
-    },
-    {
-        number: 9,
-        name: "VOILÀ - Off The Edge ft. LUNA AURA.mp3",
-        type: "audio/mpeg",
-        thumbnail: "./assets/demo-thumbnail/music9.jpg",
-        source: "./assets/demo-music/VOILÀ - Off The Edge ft. LUNA AURA.mp3"
-    },
+    }
 ]
 
 var playButton = document.getElementById("playbtn");
@@ -80,68 +52,106 @@ var repeatButton = document.getElementById("repeatbtn");
 var volumeOn = document.getElementById("volumeon");
 var volumeOff = document.getElementById("volumeoff");
 var volumeSlider = document.getElementById("volume");
-// var displayedTime = document.getElementById("playing-time");
-// var displayedNumber = document.getElementById("song-number");
+var displayedTime = document.getElementById("playing-time");
+var displayedDuration = document.getElementById("duration-time");
 var displayedThumbnail = document.getElementById("thumbnail");
 var displayedTitle1 = document.getElementById("songTitle1")
 var displayedTitle2 = document.getElementById("songTitle2")
+var progressSlider = document.getElementById("progress");
 var currentSongNumber = 0;
+var totalTime = 0;
+var shuffle = false;
 
-function musicPlaying(musicNumber = currentSongNumber) {
-    
+function loadSong(musicNumber) {
     currentSongNumber = musicNumber;
-    playButton.style.display = "none";
-    pauseButton.style.display = "inline"    
-
-    var song = document.getElementById(`audio${musicNumber}`)
-    song.play();
-    updateVolume(song);
+    var audio = document.getElementById("currentAudio");
+    audio.src = "./assets/demo-music/" + music[musicNumber].name;
+    displayedThumbnail.style.backgroundImage = 'url(' + music[musicNumber].thumbnail + ')';
     
-    
-    // time - see github repository => addEventListener("timeupdate")
+    // styling of title in list window
     var title = document.getElementById(`title${musicNumber}`).getElementsByTagName('a')[0];
     title.style.color = getComputedStyle(document.documentElement).getPropertyValue('--slider-range-color')
-    displayedThumbnail.style.backgroundImage = 'url(' + music[musicNumber].thumbnail + ')';
+    
+    // doubled title for infinity rotation
     displayedTitle1.innerHTML = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
     displayedTitle2.innerHTML = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
+
+    // default volume setting at start
+    audio.volume = 0.5;
+
+    // duration of audio object can only be loaded from metadata
+    audio.addEventListener("loadedmetadata", () => {
+        displayedDuration.innerHTML = getSongTimeFormatted(audio.duration);
+        totalTime = audio.duration;
+    })
+    audio.addEventListener("timeupdate", () => {
+        displayedTime.innerHTML = getSongTimeFormatted(audio.currentTime);
+        // first try totalTime equals 0 which leads to irregular jump of slider
+        if(totalTime != 0) progressSlider.value = Math.floor((audio.currentTime / totalTime)*100)
+    })
 }
 
-function musicPausing() {
+function musicPlay() {
+    playButton.style.display = "none";
+    pauseButton.style.display = "inline"
+
+    var song = document.getElementById("currentAudio");
+    song.play();
+    updateVolume(song);    
+}
+
+function musicPause() {
     playButton.style.display = "inline";
     pauseButton.style.display = "none";
 
-    var song = document.getElementById(`audio${currentSongNumber}`)
+    var song = document.getElementById("currentAudio")
     song.pause();
 }
 
-function resetSongPlayTime(musicNumber) {
-    var song = document.getElementById(`audio${musicNumber}`);
-    song.currentTime = 0;
+function musicPrevious() {
+    var nextSong;
+    
+    if(shuffle) nextSong = getRandomSongNumber();
+    else nextSong = (currentSongNumber == 0) ? music.length-1 : currentSongNumber-1;
+    
+    resetSelectedElementStyle(true);
+    loadSong(nextSong);
+    musicPlay();
 }
 
-function musicSkipPrevious() {
-    // TODO
-    // go back to song previous in list
-}
+function musicNext() {
+    var nextSong;
 
-function musicSkipNext() {
-    // TODO
-    // go forward to song next in list
+    if(shuffle) nextSong = getRandomSongNumber();
+    else nextSong = (currentSongNumber == music.length-1) ? 0 : currentSongNumber+1;
+
+    resetSelectedElementStyle(true);
+    loadSong(nextSong);
+    musicPlay();
 }
 
 function musicShuffling() {
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--shuffle-color');
     repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
 
+    shuffle = true;
+    document.getElementById("currentAudio").addEventListener("ended", ()=> {
+        musicNext();
+    });
 }
-
+    
 function musicRepeating() {
     repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--repeat-color');
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
+    
+    shuffle = false;
+    document.getElementById("currentAudio").addEventListener("ended", ()=> {
+        musicNext();
+    });
 }
 
-function changeVolumeSymbol(val) {
-    if(val == 0) {
+function changeVolumeSymbol(vol) {
+    if(vol == 0) {
         volumeOff.style.display = "inline";
         volumeOn.style.display = "none";
     } else {
@@ -153,7 +163,41 @@ function changeVolumeSymbol(val) {
 }
 
 function updateVolume(song) {
-    volumeSlider.addEventListener("input", (e) => {
-        song.volume = e.currentTarget.value/100;
+    volumeSlider.addEventListener("input", (val) => {
+        song.volume = val.currentTarget.value/100;
     })
+}
+
+function updateSongProgress(timeVal) {
+    document.getElementById("currentAudio").currentTime = (timeVal*totalTime)/100;
+}
+
+function getRandomSongNumber() {
+    return Math.floor(Math.random() * (music.length-1));
+}
+
+function getSongTimeFormatted(time) {
+    const h = Math.floor(time / 3600).toString().padStart(2, '0'),
+    m = Math.floor(time % 3600 / 60).toString().padStart(2, '0'),
+    s = Math.floor(time % 60).toString().padStart(2, '0');
+
+    return `${h}:${m}:${s}`;
+}
+
+function resetPlayer() {
+    var song = document.getElementById("currentAudio");
+    if(song.src == "") return;
+    song.currentTime = 0;
+    song.src = "";
+    volumeSlider.value = 50;
+    
+    // thumbnail, title rotation and time values visually reset
+    displayedThumbnail.style.backgroundImage = "./assets/not_available.jpg";
+    displayedThumbnail.style.backgroundImage = 'url(./assets/not_available.jpg)'
+    displayedTime.innerHTML = "";
+    displayedTime.style.color = "transparent";
+    displayedDuration.innerHTML = "";
+    displayedDuration.style.color = "transparent";
+    displayedTitle1.innerHTML = "no music selected |&nbsp;";
+    displayedTitle2.innerHTML = "no music selected |&nbsp;";
 }
