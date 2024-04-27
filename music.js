@@ -107,6 +107,8 @@ function loadSong(musicNumber = currentSongNumber) {
     displayedTitle1.innerHTML = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
     displayedTitle2.innerHTML = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
 
+    audio.volume = 0.5;
+
     audio.addEventListener("loadedmetadata", () => {
         displayedDuration.innerHTML = getSongTimeFormatted(audio.duration);
         totalTime = audio.duration;
