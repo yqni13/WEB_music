@@ -46,12 +46,12 @@ function loadMusic() {
         removeAllBtn.style.visibility = "visible";
         displayedTime.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ghost-white');
         displayedDuration.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ghost-white');
+        createMusicListElements(music);
+        loadSong(0);
+        musicPlay();
+        musicRepeating();
     }
 
-    createMusicListElements(music);
-    loadSong();
-    musicPlay();
-    musicRepeating();
 }
 
 function createMusicListElements(musicElements) {

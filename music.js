@@ -97,7 +97,8 @@ var currentSongNumber = 0;
 var totalTime = 0;
 var shuffle = false;
 
-function loadSong(musicNumber = currentSongNumber) {
+function loadSong(musicNumber) {
+    currentSongNumber = musicNumber;
     var audio = document.getElementById("currentAudio");
     audio.src = "./assets/demo-music/" + music[musicNumber].name;
     displayedThumbnail.style.backgroundImage = 'url(' + music[musicNumber].thumbnail + ')';
@@ -158,7 +159,7 @@ function musicNext() {
 
     if(shuffle) nextSong = getRandomSongNumber();
     else nextSong = (currentSongNumber == music.length-1) ? 0 : currentSongNumber+1;
-    
+
     resetSelectedElementStyle(true);
     loadSong(nextSong);
     musicPlay();
