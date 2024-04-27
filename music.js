@@ -42,41 +42,6 @@ const musicDB = [
         type: "audio/mpeg",
         thumbnail: "./assets/demo-thumbnail/music5.jpg",
         source: "./assets/demo-music/Sea Of Problems.mp3"
-    },
-    {
-        number: 6,
-        name: "Skeler - In My Mind.mp3",
-        type: "audio/mpeg",
-        thumbnail: "./assets/demo-thumbnail/music6.jpg",
-        source: "./assets/demo-music/Skeler - In My Mind.mp3"
-    },
-    {
-        number: 7,
-        name: "Taras Stanin - Creepin - The Weeknd Beatbox Cover.mp3",
-        type: "audio/mpeg",
-        thumbnail: "./assets/demo-thumbnail/music7.jpg",
-        source: "./assets/demo-music/Taras Stanin - Creepin - The Weeknd Beatbox Cover.mp3"
-    },
-    {
-        number: 8,
-        name: "Teddy Swims - Lose Control.mp3",
-        type: "audio/mpeg",
-        thumbnail: "./assets/demo-thumbnail/music8.jpg",
-        source: "./assets/demo-music/Teddy Swims - Lose Control.mp3"
-    },
-    {
-        number: 9,
-        name: "VOILÀ - Off The Edge ft. LUNA AURA.mp3",
-        type: "audio/mpeg",
-        thumbnail: "./assets/demo-thumbnail/music9.jpg",
-        source: "./assets/demo-music/VOILÀ - Off The Edge ft. LUNA AURA.mp3"
-    },
-    {
-        number: 10,
-        name: "Z_PHONK.mp3",
-        type: "audio/mpeg",
-        thumbnail: "./assets/demo-thumbnail/music10.jpg",
-        source: "./assets/demo-music/Z_PHONK.mp3"
     }
 ]
 
