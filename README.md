@@ -3,7 +3,7 @@ version 1.0
 
 ## Screenshot - loaded
 
-<img src="./assets/player_loaded.png.jpg" alt="music player loaded">
+<img src="./assets/readme_img/player_loaded.png.jpg" alt="music player loaded">
 
 
 
@@ -26,10 +26,10 @@ TRY IT: https://github.com/yqni13/WEB_music/
 
 <div style="display:inline;align-items:center;">
     <li>
-        <span style="padding-right:22px">repeat (playlist continues to play in loop [green button])</span><img src="./assets/repeat-mode.jpg" style="height:auto;width:15%;vertical-align:middle;padding-bottom:5px">
+        <span style="padding-right:22px">repeat (playlist continues to play in loop [green button])</span><img src="./assets/readme_img/repeat-mode.jpg" style="height:auto;width:15%;vertical-align:middle;padding-bottom:5px">
     </li>
     <li>
-        <span style="padding-right:10px">shuffle (playlist plays random chosen songs [blue button])</span><img src="./assets/shuffle-mode.jpg" style="height:auto;width:15%;vertical-align:middle">
+        <span style="padding-right:10px">shuffle (playlist plays random chosen songs [blue button])</span><img src="./assets/readme_img/shuffle-mode.jpg" style="height:auto;width:15%;vertical-align:middle">
     </li>
 </div>
 
@@ -45,7 +45,7 @@ TRY IT: https://github.com/yqni13/WEB_music/
 
 ### Sliders
 
-<img src="./assets/sliders.jpg">
+<img src="./assets/readme_img/sliders.jpg">
 <p>
     The progress bar [left] and volume bar [right] take input by moving the slider button to adjust values [time/volume].
 </p>
@@ -56,15 +56,15 @@ TRY IT: https://github.com/yqni13/WEB_music/
 <p>
     Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal <span style="border-style:solid;padding:2px;background-color:grey">onclick</span>, which marks the song, but doesn't start it to play. A song is finally selected and start to play by <span style="color:#ff96ab">dblclick</span> on wanted element.
 </p>
-<div style="text-align:center"><img src="./assets/list-view.jpg" style="width:50%;"></div><br>
+<div style="text-align:center"><img src="./assets/readme_img/list-view.jpg" style="width:50%;"></div><br>
 <p>
     After a song is selected and starts to play, the regarding thumbnail will be shown in the detail section. Additionally, the title of the song will rotate endlessly and the current time progress as well as the total duration are shown below.
 </p>
-<div style="text-align:center"><img src="./assets/detail-view.jpg" style="width:50%;"></div>
+<div style="text-align:center"><img src="./assets/readme_img/detail-view.jpg" style="width:50%;"></div>
 
 ## Screenshot - cleared
 
-<img src="./assets/player_preloaded.png.jpg" alt="music player cleared">
+<img src="./assets/readme_img/player_preloaded.png.jpg" alt="music player cleared">
 
 <p>
     Meanwhile the first idea was to enable the user to select music from local storage via audio input in html, this feature was dismissed. Javascript doesn't allow on client side to access user directories. This is only possible from server side to access and would exceed the scope of this side project. Therefore, this music player as well as seen in many other repositories, this music player will use pre-defined music elements.
