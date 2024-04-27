@@ -46,7 +46,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 
-
 /* slider styling end. */
 
 #progress {
@@ -56,6 +55,3 @@ input[type="range"]::-moz-range-thumb {
 #volume {
     width: 15%;
 }
-
-/* TODO scale sliders to use full width of tools container */
-/* hint: use tables/grid structure? */

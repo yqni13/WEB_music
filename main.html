@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="icon" type="image/x-icon" href="assets/headphones_github.ico">
-    <title>yqni13 Music Player</title>
+    <title id="browser-title"></title>
 </head>
 <body>
     <div class="player">
         <div class="details">
             <div class="list" id="listOverview">
                 <div class="selector" id="selectorOverview">
-                    <label class="btnlabel" for="btn">load music from local path</label>
+                    <label class="btnlabel" for="btn">load pre-defined music</label>
                     <button id="btn" onclick="loadMusic()">
                 </div>
                 <audio id="currentAudio" src=""></audio>
@@ -39,8 +39,8 @@
         </div>
         <div class="tools">
             <i class="icon-SkipPrevious" onclick="musicPrevious()"></i>
-            <i class="icon-Play" id="playbtn" onclick="musicPlaying()"></i>
-            <i class="icon-Pause" id="pausebtn" onclick="musicPausing()"></i>
+            <i class="icon-Play" id="playbtn" onclick="musicPlay()"></i>
+            <i class="icon-Pause" id="pausebtn" onclick="musicPause()"></i>
             <i class="icon-SkipNext" onclick="musicNext()"></i>
             <i class="icon-Shuffle" id="shufflebtn" onclick="musicShuffling()"></i>
             <i class="icon-Repeat" id="repeatbtn" onclick="musicRepeating()"></i>
