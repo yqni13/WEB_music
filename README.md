@@ -22,11 +22,13 @@ version 1.0
 
 ### Modes
 
-- repeat playlist continues to play in loop ( ${\color{yellowgreen}green}$ button )
-<br><img width="100px" src="./assets/readme_img/repeat-mode.jpg" width="100px" style="">
-<br><br>
-- shuffle (playlist plays random chosen songs ( ${\color{skyblue}blue}$ button )
-<br><img width="100px" src="./assets/readme_img/shuffle-mode.jpg">
+1. repeat playlist continues to play in loop ( ${\color{yellowgreen}green}$ button )
+<div align="center">
+    <img width="100px" src="./assets/readme_img/repeat-mode.jpg">
+    <img width="100px" src="./assets/readme_img/shuffle-mode.jpg">
+</div>
+
+1. shuffle playlist plays random chosen songs ( ${\color{skyblue}blue}$ button )
 
 
 ### Defaults
@@ -50,7 +52,7 @@ Default mode: ${\color{yellowgreen}repeat}$
 
 
 
-Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal $\colorbox{gray}{\color{darkgray}onclick}$, which marks the song, but doesn't start it to play. A song is finally selected and start to play by ${\color{pink}dblclick}$ on wanted element.
+Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal ![](https://img.shields.io/static/v1?label=&message=onclick&color=lightgray), which marks the song, but doesn't start it to play. A song is finally selected and start to play by ${\color{pink}dblclick}$ on wanted element.
 
 <div align="center"><img src="./assets/readme_img/list-view.jpg" style="width:50%;"></div><br>
 <p>
