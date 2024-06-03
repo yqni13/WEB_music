@@ -17,21 +17,35 @@ version 1.0
 </div>
 <br>
 
-TRY IT: https://github.com/yqni13/WEB_music/
-<br><br>
 
 ## Functionality
 
 ### Modes
 
-<div style="display:inline;align-items:center;">
-    <li>
-        <span style="padding-right:22px">repeat (playlist continues to play in loop [green button])</span><img src="./assets/readme_img/repeat-mode.jpg" style="height:auto;width:15%;vertical-align:middle;padding-bottom:5px">
-    </li>
-    <li>
-        <span style="padding-right:10px">shuffle (playlist plays random chosen songs [blue button])</span><img src="./assets/readme_img/shuffle-mode.jpg" style="height:auto;width:15%;vertical-align:middle">
-    </li>
-</div>
+
+
+<table style="border-color: transparent;" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td></td>
+        <td rowspan="3"><img src="./assets/readme_img/repeat-mode.jpg" width="100px"></td>
+    </tr>
+    <tr>
+        <td>- repeat (playlist continues to play in loop [<span style="color: #77B300">green</span> button])</td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td rowspan="3"><img src="./assets/readme_img/shuffle-mode.jpg" width="100px"></td>
+    </tr>
+    <tr>
+        <td>- shuffle (playlist plays random chosen songs [<span style="color: #00AAFF">blue</span> button])</td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+</table>
 
 ### Defaults
 
@@ -56,11 +70,11 @@ TRY IT: https://github.com/yqni13/WEB_music/
 <p>
     Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal <span style="border-style:solid;padding:2px;background-color:grey">onclick</span>, which marks the song, but doesn't start it to play. A song is finally selected and start to play by <span style="color:#ff96ab">dblclick</span> on wanted element.
 </p>
-<div style="text-align:center"><img src="./assets/readme_img/list-view.jpg" style="width:50%;"></div><br>
+<div align="center"><img src="./assets/readme_img/list-view.jpg" style="width:50%;"></div><br>
 <p>
     After a song is selected and starts to play, the regarding thumbnail will be shown in the detail section. Additionally, the title of the song will rotate endlessly and the current time progress as well as the total duration are shown below.
 </p>
-<div style="text-align:center"><img src="./assets/readme_img/detail-view.jpg" style="width:50%;"></div>
+<div align="center"><img src="./assets/readme_img/detail-view.jpg" width="50%" ></div>
 
 ## Screenshot - cleared
 
