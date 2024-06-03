@@ -30,7 +30,7 @@ version 1.0
         <td rowspan="3"><img src="./assets/readme_img/repeat-mode.jpg" width="100px"></td>
     </tr>
     <tr>
-        <td>- repeat (playlist continues to play in loop [<span style="color: #77B300">green</span> button])</td>
+        <td>- repeat (playlist continues to play in loop [<span color="#77B300">green</span> button])</td>
     </tr>
     <tr>
         <td></td>
