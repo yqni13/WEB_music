@@ -22,40 +22,22 @@ version 1.0
 
 ### Modes
 
+- repeat playlist continues to play in loop ( ${\color{yellowgreen}green}$ button )
+<br><img width="100px" src="./assets/readme_img/repeat-mode.jpg" width="100px" style="">
+<br><br>
+- shuffle (playlist plays random chosen songs ( ${\color{skyblue}blue}$ button )
+<br><img width="100px" src="./assets/readme_img/shuffle-mode.jpg">
 
-
-<table style="border-color: transparent;" cellspacing="0" cellpadding="0" border="0">
-    <tr>
-        <td></td>
-        <td rowspan="3"><img src="./assets/readme_img/repeat-mode.jpg" width="100px"></td>
-    </tr>
-    <tr>
-        <td>- repeat (playlist continues to play in loop [<span color="#77B300">green</span> button])</td>
-    </tr>
-    <tr>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td rowspan="3"><img src="./assets/readme_img/shuffle-mode.jpg" width="100px"></td>
-    </tr>
-    <tr>
-        <td>- shuffle (playlist plays random chosen songs [<span style="color: #00AAFF">blue</span> button])</td>
-    </tr>
-    <tr>
-        <td></td>
-    </tr>
-</table>
 
 ### Defaults
 
-<p>
-    As the music player is started, no music is loaded, as the first idea was to take music elements as an input from the user and play them. Therefore, the input field "load pre-defined music" is shown. Currently, the player loads a pre-defined list of songs and thumbnail images by clicking on the input field, referring to content inside path "./assets/demo-music" and "./assets/demo-thumbnail".<br><br>
-    Default song: first in list<br>
-    Default volume: 50%<br>
-    Default progress: 0%<br>
-    Default mode: <span style="color:#77B300">repeat</span>
-</p>
+
+As the music player is started, no music is loaded, as the first idea was to take music elements as an input from the user and play them. Therefore, the input field "load pre-defined music" is shown. Currently, the player loads a pre-defined list of songs and thumbnail images by clicking on the input field, referring to content inside path "./assets/demo-music" and "./assets/demo-thumbnail".<br><br>
+Default song: first in list<br>
+Default volume: 50%<br>
+Default progress: 0%<br>
+Default mode: ${\color{yellowgreen}repeat}$
+
 
 ### Sliders
 
@@ -67,9 +49,9 @@ version 1.0
 ### Others
 
 
-<p>
-    Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal <span style="border-style:solid;padding:2px;background-color:grey">onclick</span>, which marks the song, but doesn't start it to play. A song is finally selected and start to play by <span style="color:#ff96ab">dblclick</span> on wanted element.
-</p>
+
+Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal $\colorbox{gray}{\color{darkgray}onclick}$, which marks the song, but doesn't start it to play. A song is finally selected and start to play by ${\color{pink}dblclick}$ on wanted element.
+
 <div align="center"><img src="./assets/readme_img/list-view.jpg" style="width:50%;"></div><br>
 <p>
     After a song is selected and starts to play, the regarding thumbnail will be shown in the detail section. Additionally, the title of the song will rotate endlessly and the current time progress as well as the total duration are shown below.
