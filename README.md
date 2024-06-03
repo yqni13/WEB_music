@@ -52,7 +52,7 @@ Default mode: ${\color{yellowgreen}repeat}$
 
 
 
-Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal ![](https://img.shields.io/static/v1?label=&message=onclick&color=lightgray), which marks the song, but doesn't start it to play. A song is finally selected and start to play by ${\color{pink}dblclick}$ on wanted element.
+Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal ${\color{gray}onclick}$, which marks the song, but doesn't start it to play. A song is finally selected and start to play by ${\color{pink}dblclick}$ on wanted element.
 
 <div align="center"><img src="./assets/readme_img/list-view.jpg" style="width:50%;"></div><br>
 <p>
