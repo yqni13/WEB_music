@@ -71,7 +71,7 @@ Play or Pause button hide/appear depending on actively playing a song. The skip 
 
 ## Updates
 
-### $\textsf{last\ update\ 1.0.0\ {\footnotesize{>>}}\ {\color{pink}1.1.3}}$
+### $\textsf{last\ update\ 1.0.0\ >>\ {\color{pink}1.1.3}}$
 
 
 - $\textsf{\color{orange}Change:}$ Cursor will change to pointer when hovering an icon with functionality to use (exception: active icons, that can not be activated again like shuffle/repeat mode).
