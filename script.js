@@ -7,6 +7,7 @@ function initializePlayer() {
     pauseButton.style.display = "none";
     document.getElementById("progress").value = 0;
     volumeOff.style.display = "none"
+    document.getElementById("tools-inactive").style.display = "block";      
 }
 
 function removeAll() {
@@ -26,7 +27,9 @@ function removeAll() {
     document.getElementById("listOverview").style.borderColor = 'transparent';
     document.getElementById("clearOverview").style.visibility = "hidden";
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
+    shuffleButton.className = "icon-Shuffle normal";
     repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
+    repeatButton.className = "icon-Repeat normal";
 }
 
 function loadMusic() {
@@ -38,7 +41,8 @@ function loadMusic() {
     if(music.length == 0) {
         list.style.borderColor = 'transparent';
         selector.style.visibility = "visible";
-        removeAllBtn.style.visibility = "hidden";        
+        removeAllBtn.style.visibility = "hidden";
+        document.getElementById("tools-inactive").style.display = "block";
     } else {
         list.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--yqni13-purple');
         selector.style.visibility = "hidden";
@@ -46,6 +50,7 @@ function loadMusic() {
         removeAllBtn.style.visibility = "visible";
         displayedTime.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ghost-white');
         displayedDuration.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ghost-white');
+        document.getElementById("tools-inactive").style.display = "none"      
         createMusicListElements(music);
         loadSong(0);
         musicPlay();
