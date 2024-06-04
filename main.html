@@ -42,16 +42,17 @@
             <i class="icon-Play" id="playbtn" onclick="musicPlay()"></i>
             <i class="icon-Pause" id="pausebtn" onclick="musicPause()"></i>
             <i class="icon-SkipNext" onclick="musicNext()"></i>
-            <i class="icon-Shuffle" id="shufflebtn" onclick="musicShuffling()"></i>
-            <i class="icon-Repeat" id="repeatbtn" onclick="musicRepeating()"></i>
+            <i class="icon-Shuffle normal" id="shufflebtn" onclick="musicShuffling()"></i>
+            <i class="icon-Repeat normal" id="repeatbtn" onclick="musicRepeating()"></i>
             <input class="slider" type="range" min="0" max="100" id="progress" oninput="updateSongProgress(this.value)"/>
-            <i class="icon-VolumeOn" id="volumeon"></i>
-            <i class="icon-VolumeOff" id="volumeoff"></i>
+            <i class="icon-VolumeOn" onclick="quickUpdateVolume(true)" id="volumeon"></i>
+            <i class="icon-VolumeOff" onclick="quickUpdateVolume(false)" id="volumeoff"></i>
             <input class="slider" type="range" min="0" max="100" value="50" id="volume" oninput="changeVolumeSymbol(this.value)"/>            
         </div>
+        <div id="tools-inactive"></div>
     </div>
 
     <script src="music.js"></script>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

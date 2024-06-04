@@ -143,6 +143,10 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
 }
 
 .clearLabel {

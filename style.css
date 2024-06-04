@@ -66,10 +66,10 @@ body {
     margin: 10px;
     padding: 5px;
     display: flex;
+    position: relative;
 }
 
 .tools {
-    width: 600px;
     height: 20px;
     border-style: solid;
     border-color: grey;
@@ -77,6 +77,19 @@ body {
     margin: 10px;
     padding: 5px 5px 0px 5px;
     align-content: center;
+}
+
+#tools-inactive {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: transparent;
+    padding: 15px;
+    width: -webkit-fill-available;
+    z-index: 101;
 }
 
 li {
@@ -91,5 +104,10 @@ li {
 
 li i {
     height: 18px;
+}
+
+li i:nth-of-type(2):hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
 
