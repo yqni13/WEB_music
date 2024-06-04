@@ -1,5 +1,5 @@
 # yqni13 music player
-version 1.0
+$\texttt{\color{teal}{version 1.1.3}}$
 
 ## Screenshot - loaded
 
@@ -17,31 +17,29 @@ version 1.0
 </div>
 <br>
 
-TRY IT: https://github.com/yqni13/WEB_music/
-<br><br>
 
 ## Functionality
 
 ### Modes
 
-<div style="display:inline;align-items:center;">
-    <li>
-        <span style="padding-right:22px">repeat (playlist continues to play in loop [green button])</span><img src="./assets/readme_img/repeat-mode.jpg" style="height:auto;width:15%;vertical-align:middle;padding-bottom:5px">
-    </li>
-    <li>
-        <span style="padding-right:10px">shuffle (playlist plays random chosen songs [blue button])</span><img src="./assets/readme_img/shuffle-mode.jpg" style="height:auto;width:15%;vertical-align:middle">
-    </li>
+1. repeat playlist continues to play in loop ( ${\textsf{\color{yellowgreen}green}}$ button )
+<div align="center">
+    <img width="100px" src="./assets/readme_img/repeat-mode.jpg">
+    <img width="100px" src="./assets/readme_img/shuffle-mode.jpg">
 </div>
+
+1. shuffle playlist plays random chosen songs ( ${\textsf{\color{skyblue}blue}}$ button )
+
 
 ### Defaults
 
-<p>
-    As the music player is started, no music is loaded, as the first idea was to take music elements as an input from the user and play them. Therefore, the input field "load pre-defined music" is shown. Currently, the player loads a pre-defined list of songs and thumbnail images by clicking on the input field, referring to content inside path "./assets/demo-music" and "./assets/demo-thumbnail".<br><br>
-    Default song: first in list<br>
-    Default volume: 50%<br>
-    Default progress: 0%<br>
-    Default mode: <span style="color:#77B300">repeat</span>
-</p>
+
+As the music player is started, no music is loaded, as the first idea was to take music elements as an input from the user and play them. Therefore, the input field "load pre-defined music" is shown. Currently, the player loads a pre-defined list of songs and thumbnail images by clicking on the input field, referring to content inside path "./assets/demo-music" and "./assets/demo-thumbnail".<br><br>
+Default song: first in list<br>
+Default volume: 50%<br>
+Default progress: 0%<br>
+Default mode: ${\textsf{\color{yellowgreen}repeat}}$
+
 
 ### Sliders
 
@@ -53,14 +51,14 @@ TRY IT: https://github.com/yqni13/WEB_music/
 ### Others
 
 
-<p>
-    Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal <span style="border-style:solid;padding:2px;background-color:grey">onclick</span>, which marks the song, but doesn't start it to play. A song is finally selected and start to play by <span style="color:#ff96ab">dblclick</span> on wanted element.
-</p>
-<div style="text-align:center"><img src="./assets/readme_img/list-view.jpg" style="width:50%;"></div><br>
+
+Play or Pause button hide/appear depending on actively playing a song. The skip buttons to previous or next song work in both modes (shuffle/repeat). A song from the list can be pre-selected with normal ${\color{gray}onclick}$, which marks the song, but doesn't start it to play. A song is finally selected and start to play by ${\color{pink}dblclick}$ on wanted element.
+
+<div align="center"><img src="./assets/readme_img/list-view.jpg" style="width:50%;"></div><br>
 <p>
     After a song is selected and starts to play, the regarding thumbnail will be shown in the detail section. Additionally, the title of the song will rotate endlessly and the current time progress as well as the total duration are shown below.
 </p>
-<div style="text-align:center"><img src="./assets/readme_img/detail-view.jpg" style="width:50%;"></div>
+<div align="center"><img src="./assets/readme_img/detail-view.jpg" width="50%" ></div>
 
 ## Screenshot - cleared
 
@@ -69,19 +67,32 @@ TRY IT: https://github.com/yqni13/WEB_music/
 <p>
     Meanwhile the first idea was to enable the user to select music from local storage via audio input in html, this feature was dismissed. Javascript doesn't allow on client side to access user directories. This is only possible from server side to access and would exceed the scope of this side project. Therefore, this music player as well as seen in many other repositories, this music player will use pre-defined music elements.
 </p>
+<br>
 
 ## Updates
 
-### Aimed objectives for next updates within vers1.0:
-<p>
-    <span>- error handling for music failed to load</span><br>
-    <span>- error handling for thumbnails failed to load</span><br>
-    <span>- adding author to displayed information</span><br>
-    <span>- deactivate tools if no music is loaded</span><br><br>
-</p>
+### $\textsf{last\ update\ 1.0.0\ >>\ {\color{pink}1.1.3}}$
 
-### Aimed objectives for next update within vers2.0:
-<p>
-    <span>- load music from specified path (no more static data)</span><br>
-    <span>- load thumbnails from music element</span><br>
-</p>
+
+- $\textsf{\color{orange}Change:}$ Cursor will change to pointer when hovering an icon with functionality to use (exception: active icons, that can not be activated again like shuffle/repeat mode).
+- $\textsf{\color{orange}Change:}$ Functionality on icons will be disabled as long as no music is loaded.</dd>
+- $\textsf{\color{orange}Change:}$ Clicking on the volume icon will either mute the music or reset to the previous volume.
+- $\textsf{\color{red}Bugfix:}$ Volume will stay for every upcoming song the same until manually changed. [Before: Volume was always reset to 50% when new song was loaded.]
+- $\textsf{\color{red}Bugfix:}$ Clicking on the volume icon will mute music and slider set to value 0% or back to previous volume. [Before: Slider was not updated when clicking on volume icon.]
+- $\textsf{\color{red}Bugfix:}$ Removing whole list of music disables functionality of any icons. [Before: Functionality of icons was not again disabled after removing list of loaded music.]
+<br><br>
+
+### Aimed objectives for next $\textsf{\color{green}minor}$ update:
+<dl>
+    <dd>- error handling for music failing to load</dd>
+    <dd>- error handling for thumbnails failing to load</dd>
+    <dd>- enable removing single songs from list via trashbin icon</dd>
+</dl>
+<br>
+
+### Aimed objectives for next $\textsf{\color{cyan}major}$ update:
+<dl>
+    <dd>- load music from specified path (no more static data)</dd>
+    <dd>- load metadata from music element and dispay (thumbnail, autor, genre, ...)</dd>
+    <dd>- responsive design</dd>
+</dl>

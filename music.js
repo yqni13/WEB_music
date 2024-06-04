@@ -58,6 +58,8 @@ var displayedThumbnail = document.getElementById("thumbnail");
 var displayedTitle1 = document.getElementById("songTitle1")
 var displayedTitle2 = document.getElementById("songTitle2")
 var progressSlider = document.getElementById("progress");
+var firstTrack = true;
+var lastVolumeState = 0;
 var currentSongNumber = 0;
 var totalTime = 0;
 var shuffle = false;
@@ -77,7 +79,10 @@ function loadSong(musicNumber) {
     displayedTitle2.innerHTML = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
 
     // default volume setting at start
-    audio.volume = 0.5;
+    if (firstTrack) {
+        audio.volume = 0.5;
+        firstTrack = false;
+    }
 
     // duration of audio object can only be loaded from metadata
     audio.addEventListener("loadedmetadata", () => {
@@ -132,7 +137,9 @@ function musicNext() {
 
 function musicShuffling() {
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--shuffle-color');
+    shuffleButton.className = "icon-Shuffle mode";
     repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
+    repeatButton.className = "icon-Repeat normal";
 
     shuffle = true;
     document.getElementById("currentAudio").addEventListener("ended", ()=> {
@@ -142,8 +149,10 @@ function musicShuffling() {
     
 function musicRepeating() {
     repeatButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--repeat-color');
+    repeatButton.className = "icon-Repeat mode";
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
-    
+    shuffleButton.className = "icon-Shuffle normal";
+
     shuffle = false;
     document.getElementById("currentAudio").addEventListener("ended", ()=> {
         musicNext();
@@ -155,11 +164,23 @@ function changeVolumeSymbol(vol) {
         volumeOff.style.display = "inline";
         volumeOn.style.display = "none";
     } else {
-        if(volumeOff.style.display == "inline") {
-            volumeOff.style.display = "none";
-            volumeOn.style.display = "inline";
-        }
+        volumeOff.style.display = "none";
+        volumeOn.style.display = "inline";
     }
+}
+
+function quickUpdateVolume(mute = false) {
+    var audio = document.getElementById("currentAudio");
+    console.log("volume: ", audio.volume);
+    
+    if (!mute) audio.volume = lastVolumeState;
+    else {
+        lastVolumeState = audio.volume;
+        audio.volume = 0;
+    }
+
+    volumeSlider.value = audio.volume*100;
+    changeVolumeSymbol(audio.volume);
 }
 
 function updateVolume(song) {
@@ -190,8 +211,10 @@ function resetPlayer() {
     song.currentTime = 0;
     song.src = "";
     volumeSlider.value = 50;
+    firstTrack = true;
     
     // thumbnail, title rotation and time values visually reset
+    document.getElementById("tools-inactive").style.display = "block";
     displayedThumbnail.style.backgroundImage = "./assets/not_available.jpg";
     displayedThumbnail.style.backgroundImage = 'url(./assets/not_available.jpg)'
     displayedTime.innerHTML = "";
