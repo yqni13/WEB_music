@@ -7,7 +7,7 @@ function initializePlayer() {
     pauseButton.style.display = "none";
     document.getElementById("progress").value = 0;
     volumeOff.style.display = "none"
-    document.getElementById("tools-inactive").style.display = "block";      
+    document.getElementById("tools-inactive").style.display = "block"; 
 }
 
 function removeAll() {
