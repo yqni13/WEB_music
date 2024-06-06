@@ -1,5 +1,5 @@
 # yqni13 music player
-$\texttt{\color{teal}{version 1.1.3}}$
+$\texttt{\color{teal}{v1.1.3}}$
 
 ## Screenshot - loaded
 
@@ -17,6 +17,17 @@ $\texttt{\color{teal}{version 1.1.3}}$
 </div>
 <br>
 
+## HOW TO:
+
+1. Start this single page application by opening index.html in your browser.
+2. Click on "load pre-defined music" and the default music is listed on the left side as single song elements.
+3. The first song automatically starts to play. For default the repeat mode will play song after song in order and start with 50% volume.
+4. Press pause to stop the music, keep playing or select another song by the skip buttons (previous/next) or via double click on the song element in interest.
+5. Use the volume slider to increase/decrease the volume or the progress slider to navigate to your prefered time spot of a song.
+6. Currently single song elements can not be removed but only the complete list with the "clear list x" button, which removes the whole list and the "load pre-defined music" field re-appears.
+
+### <a href="https://yqni13.github.io/WEB_music/">!! TRY HERE LIVE !!</a>
+<br>
 
 ## Functionality
 
@@ -28,7 +39,7 @@ $\texttt{\color{teal}{version 1.1.3}}$
     <img width="100px" src="./assets/readme_img/shuffle-mode.jpg">
 </div>
 
-1. shuffle playlist plays random chosen songs ( ${\textsf{\color{skyblue}blue}}$ button )
+2. shuffle playlist plays random chosen songs ( ${\textsf{\color{skyblue}blue}}$ button )
 
 
 ### Defaults
