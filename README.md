@@ -1,5 +1,5 @@
 # yqni13 music player
-$\texttt{\color{teal}{version 1.1.3}}$
+$\texttt{\color{teal}{v1.1.3}}$
 
 ## Screenshot - loaded
 
@@ -28,7 +28,7 @@ $\texttt{\color{teal}{version 1.1.3}}$
     <img width="100px" src="./assets/readme_img/shuffle-mode.jpg">
 </div>
 
-1. shuffle playlist plays random chosen songs ( ${\textsf{\color{skyblue}blue}}$ button )
+2. shuffle playlist plays random chosen songs ( ${\textsf{\color{skyblue}blue}}$ button )
 
 
 ### Defaults
