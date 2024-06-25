@@ -1,0 +1,25 @@
+:root {
+    --shuffle-color: #00AAFF;
+    --repeat-color: #77B300;
+    --btn-color: #E61291;
+    --slider-range-color: #ff96ab;
+    --slider-btn-color: #CCFFEE;
+    --glassoptic-color: rgba(255, 255, 255, 0.25);
+    --yqni13-purple: #650d88;
+    --yqni13-pink: #bc0c79;
+
+    /* white type colors */
+    --snow-white: #FFFAFA;
+    --ghost-white: #F8F8FF;
+    --alice-blue: #F0F8FF;
+    --antiflesh-white: #FAFAFA;
+    --gainsboro-white: #F1EFF2;
+    --off-white: #FBFBFB;
+    --ivory-white: #FFFFF0;
+    --deepnavy-blue: #011222;
+
+    /* most used measurements */
+    --detail-width: 53%;
+}
+
+
