@@ -1,0 +1,137 @@
+@media screen and (width >= 1440px) {
+    .player {
+        width: 60%!important;
+    }
+
+    .details {
+        .list {
+            ul {
+                li {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .active {
+        .title {
+            font-size: 1vw!important;
+        }
+        .song-data {
+            span {
+                font-size: 0.8vw!important;
+            }
+        }
+    }
+}
+
+@media screen and (width < 1440px) {
+    .details {
+        .list {
+            ul {
+                li {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width <= 1024px) {
+    .player {
+        width: 70vw!important; 
+    }
+}
+
+@media screen and (width <= 768px) {
+    .player {
+        width: 85vw!important;
+    }
+
+    .details {
+        .list {
+            ul {
+                li {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .active {
+        .song-data {
+            span {
+                font-size: 1.5vw!important;
+            }
+        }
+        .clear {
+            a {
+                font-size: 16px!important;
+            }
+        }
+    }
+}
+
+@media screen and (width <= 650px) {
+    .details {
+        .list {
+            ul {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media screen and (width <= 500px) {
+    
+    
+    .details {
+        flex-direction: row!important;
+        flex-wrap: wrap;
+        justify-content: center!important;
+        width: auto!important;
+
+        .list {
+            ul {
+                li {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .list {
+            order: 2!important;
+            margin: 2.5px 0!important;
+            width: 50%!important;
+        }
+        .active {
+            order: 1!important;
+            margin: 2.5px 0!important;
+            width: 50%!important;
+
+            #thumbnail {
+                height: auto!important;
+                aspect-ratio: 1 / 1;
+                margin-top: 5px!important;
+            }
+
+            .title {
+                margin-top: 2.5px!important;
+            }
+
+            .song-data {
+                margin: 2.5px 0 15px 0!important;
+            }
+
+            .clear {
+                a {
+                    font-size: 12px!important;
+                }
+            }
+        }
+    }
+
+}
+@media screen and (width <= 400px) {}
+@media screen and (width <= 300px) {}

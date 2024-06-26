@@ -1,8 +1,11 @@
 
 .list {
+    display: flex;
+    flex-direction: column;
+    order: 1;
     width:63%;
     height: 90%;
-    border-radius: 2px;
+    border-radius: 10px;
     border-style: solid;
     border-color: transparent;
     margin: 10px 10px 0px 10px;
@@ -14,16 +17,25 @@
 #musicList {
     text-align: start;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 10px);
+    margin: 0!important;
 }
 
 #musicList i {
     padding: 2px;
+    position: relative;
+    top: 3.5px;
 }
 
 #musicList a {
     color: grey;
     width: -webkit-fill-available;
-    padding-top: 0.5px;
+    padding: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .selector {
@@ -62,12 +74,16 @@
 }
 
 .active {
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    align-items: center;
     width: 30%;
     height: 90%;
-    border-radius: 2px;
+    border-radius: 10px;
     border-style: solid;
     border-color: var(--yqni13-pink);
-    margin: 10px 10px 0px 10px;
+    margin: 10px 10px 0px auto;
     text-align: -webkit-center;
     position: relative;
 }
@@ -123,6 +139,7 @@
     display: inline-block;
     width: var(--detail-width);
     font-size: 9px;
+    margin-top: 5px;
 }
 
 .time {
@@ -141,19 +158,25 @@
 .clear {
     visibility: hidden;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     width: 100%;
     &:hover {
         opacity: 0.6;
         cursor: pointer;
+    }
+
+    i {
+        position: relative;
+        top: 3.5px;
+        height: 18px;
+    }
+
+    a {
+        font-size: 1.2vw;
     }
 }
 
 .clearLabel {
     color: var(--ghost-white);
     font-size:14px;
-}
-
-.clear i {
-    vertical-align: sub;
 }
