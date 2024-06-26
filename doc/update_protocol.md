@@ -4,6 +4,12 @@
 
 <br>
 
+### 2024/6/26 - $\textsf{update\ 1.1.3\ {\footnotesize{>>}}\ {\color{pink}1.4.0}}$
+
+- $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding.
+- $\textsf{\color{green}Change:}$ Added new background.
+- $\textsf{\color{green}Change:}$ Added responsive design.
+
 ### 2024/6/6 - $\textsf{update\ 1.0.0\ {\footnotesize{>>}}\ {\color{pink}1.1.3}}$
 
 - $\textsf{\color{green}Change:}$ Cursor will change to pointer when hovering an icon with functionality to use (exception: active icons, that can not be activated again like shuffle/repeat mode).

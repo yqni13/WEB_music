@@ -12,6 +12,8 @@
     overflow: scroll;
     scrollbar-width: none;
     text-align: -webkit-center;
+    text-align: -moz-center;
+    text-align: center;
 }
 
 #musicList {
@@ -32,6 +34,8 @@
 #musicList a {
     color: grey;
     width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
     padding: 5px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -69,7 +73,7 @@
     border-style: outset;
     border-color: var(--ghost-white);
     background-color: var(--glassoptic-color);
-    font-size: 14px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.76);
 }
 
@@ -85,13 +89,15 @@
     border-color: var(--yqni13-pink);
     margin: 10px 10px 0px auto;
     text-align: -webkit-center;
+    text-align: -moz-center;
+    text-align: center;
     position: relative;
 }
 
 #thumbnail {
-    width: 53%;
-    height: 35%;
-    margin-top: 15%;
+    width: var(--detail-width);
+    aspect-ratio: 1 / 1;
+    margin-top: 10px;
     background-image: url("../assets/not_available.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -104,19 +110,22 @@
 
 .title {
     color: var(--ghost-white);
-    width: 53%;
+    width: var(--detail-width);
     border-style: solid;
     border-color: var(--glassoptic-color);
     border-radius: 2px;
     height: auto;
     margin-top: 5%;
-    font-size: 10px;
     padding: 5px 0px;
 
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     overflow: hidden;
+
+    span {
+        font-size: 1.2vw;
+    }
 }
 
 .title .songTitle {
@@ -138,8 +147,11 @@
 .song-data {
     display: inline-block;
     width: var(--detail-width);
-    font-size: 9px;
     margin-top: 5px;
+
+    span {
+        font-size: 1vw;
+    }
 }
 
 .time {
@@ -167,12 +179,12 @@
 
     i {
         position: relative;
-        top: 3.5px;
-        height: 18px;
+        top: 5px;
+        font-size: 24px;
     }
 
     a {
-        font-size: 1.2vw;
+        font-size: 1.5vw;
     }
 }
 

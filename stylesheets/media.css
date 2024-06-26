@@ -12,17 +12,6 @@
             }
         }
     }
-
-    .active {
-        .title {
-            font-size: 1vw!important;
-        }
-        .song-data {
-            span {
-                font-size: 0.8vw!important;
-            }
-        }
-    }
 }
 
 @media screen and (width < 1440px) {
@@ -43,10 +32,14 @@
     }
 
     .active {
-        .clear {
-            a {
-                font-size: 2vw!important;
-            }
+        .title span {
+            font-size: 1.4vw!important;
+        }
+        .song-data span {
+            font-size: 1.3vw!important;
+        }
+        .clear a {
+            font-size: 2vw!important;
         }
     }
 }
@@ -91,11 +84,19 @@
         }
     }
 
+    .btnlabel {
+        font-size: 18px!important;
+    }
+
     .tools {
         font-size: 4vw!important;
     }
 }
 @media screen and (width <= 500px) {
+    :root {
+        --details-width: 50%!important;
+    }
+
     .player {
         width: 60vw!important;
     }
@@ -126,25 +127,37 @@
             width: 100%!important;
 
             #thumbnail {
-                height: auto!important;
+                width: var(--details-width);
                 aspect-ratio: 1 / 1;
                 margin-top: 5px!important;
             }
-
+            
             .title {
+                width: var(--details-width);
                 margin-top: 2.5px!important;
             }
-
+            
             .song-data {
+                width: var(--details-width);
                 margin: 2.5px 0 15px 0!important;
+                span {
+                    font-size: 2.5vw!important;
+                }
             }
 
             .clear {
                 a {
-                    font-size: 12px!important;
+                    font-size: 2.75vw!important;
+                }
+                i {
+                    font-size: 18px!important;
                 }
             }
         }
+    }
+
+    .btnlabel {
+        font-size: 16px!important;
     }
 
     .tools {
@@ -178,6 +191,10 @@
 @media screen and (width <= 400px) {
     .player {
         width: 70vw!important;
+    }
+
+    .btnlabel {
+        font-size: 14px!important;
     }
 
     .tools {

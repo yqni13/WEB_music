@@ -1,10 +1,10 @@
 # yqni13 WEB_music
-$\texttt{\color{teal}{v1.1.3}}$
+$\texttt{\color{teal}{v1.4.0}}$
 
 <br>
 
 <div align="center">
-    <img src="./assets/readme_img/player_loaded.png.jpg" alt="music player loaded">
+    <img src="./assets/readme_img/player_loaded.jpg" alt="music player loaded">
 </div>
 
 ### Technology 
@@ -31,7 +31,7 @@ $\texttt{\color{teal}{v1.1.3}}$
 
 <br>
 
-## Functionality
+## Features
 
 ### Modes
 
@@ -75,12 +75,25 @@ Play or Pause button hide/appear depending on actively playing a song. The skip 
 
 ## Screenshot - cleared
 
-<img src="./assets/readme_img/player_preloaded.png.jpg" alt="music player cleared">
+<img src="./assets/readme_img/player_preloaded.jpg" alt="music player cleared">
 
 <p>
     Meanwhile the first idea was to enable the user to select music from local storage via audio input in html, this feature was dismissed. Javascript doesn't allow on client side to access user directories. This is only possible from server side to access and would exceed the scope of this side project. Therefore, this music player as well as seen in many other repositories, this music player will use pre-defined music elements.
 </p>
+<br><br>
+
+## Responsive design
+
+<div align="center">
+    <img src="./assets/readme_img/mobile-portrait-view.jpg" alt="music player mobile resolution">
+</div>
+
+<p>
+    New scaling for resolution 300px > width > 1440px in 8 different steps in combination with flexbox styling ensures a responsive design to use on every device. Starting with v1.4.0 there are two modes. Firstly, the basic landscape mode for tablets and desktop devices to offer a higher screenwidth. Secondly, a new portrait oriented design offers a better handling for smaller devices or window sizes.
+</p>
+
 <br>
+
 
 ## Testing
 
@@ -100,11 +113,11 @@ Play or Pause button hide/appear depending on actively playing a song. The skip 
 ## Updates
 
 [list of all updates](docs/update_protocol.md)
-### $\textsf{last\ update\ 1.1.3\ >>\ {\color{pink}?.?.?}}$
+### $\textsf{last\ update\ 1.1.3\ >>\ {\color{pink}1.4.0}}$
 
 - $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding.
 - $\textsf{\color{green}Change:}$ Added new background.
-- $\textsf{\color{green}Change:}$ Added responsive design for desktop & mobile devices.
+- $\textsf{\color{green}Change:}$ Added responsive design.
 
 <br>
 
@@ -113,7 +126,6 @@ Play or Pause button hide/appear depending on actively playing a song. The skip 
     <dd>- error handling for music failing to load</dd>
     <dd>- error handling for thumbnails failing to load</dd>
     <dd>- enable removing single songs from list via trashbin icon</dd>
-    <dd>- responsive design</dd>
 </dl>
 
 <br>
