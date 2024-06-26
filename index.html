@@ -38,16 +38,22 @@
             </div>
         </div>
         <div class="tools">
-            <i class="icon-SkipPrevious" onclick="musicPrevious()"></i>
-            <i class="icon-Play" id="playbtn" onclick="musicPlay()"></i>
-            <i class="icon-Pause" id="pausebtn" onclick="musicPause()"></i>
-            <i class="icon-SkipNext" onclick="musicNext()"></i>
-            <i class="icon-Shuffle normal" id="shufflebtn" onclick="musicShuffling()"></i>
-            <i class="icon-Repeat normal" id="repeatbtn" onclick="musicRepeating()"></i>
-            <input class="slider" type="range" min="0" max="100" id="progress" oninput="updateSongProgress(this.value)"/>
-            <i class="icon-VolumeOn" onclick="quickUpdateVolume(true)" id="volumeon"></i>
-            <i class="icon-VolumeOff" onclick="quickUpdateVolume(false)" id="volumeoff"></i>
-            <input class="slider" type="range" min="0" max="100" value="50" id="volume" oninput="changeVolumeSymbol(this.value)"/>            
+            <div class="wrapper-tools-basic">
+                <i class="icon-SkipPrevious" onclick="musicPrevious()"></i>
+                <i class="icon-Play" id="playbtn" onclick="musicPlay()"></i>
+                <i class="icon-Pause" id="pausebtn" onclick="musicPause()"></i>
+                <i class="icon-SkipNext" onclick="musicNext()"></i>
+                <i class="icon-Shuffle normal" id="shufflebtn" onclick="musicShuffling()"></i>
+                <i class="icon-Repeat normal" id="repeatbtn" onclick="musicRepeating()"></i>
+            </div>
+            <div class="wrapper-tools-progress">
+                <input class="slider" type="range" min="0" max="100" id="progress" oninput="updateSongProgress(this.value)"/>
+            </div>
+            <div class="wrapper-tools-volume">
+                <i class="icon-VolumeOn" onclick="quickUpdateVolume(true)" id="volumeon"></i>
+                <i class="icon-VolumeOff" onclick="quickUpdateVolume(false)" id="volumeoff"></i>
+                <input class="slider" type="range" min="0" max="100" value="50" id="volume" oninput="changeVolumeSymbol(this.value)"/>            
+            </div>
         </div>
         <div id="tools-inactive"></div>
     </div>

@@ -50,7 +50,7 @@ input[type="range"]::-moz-range-thumb {
 
 .slider {
     position: relative;
-    bottom: 0px;
+    bottom: 5px;
 }
 
 
@@ -60,9 +60,25 @@ input[type="range"]::-moz-range-thumb {
     width: 100%;
 }
 
+.wrapper-tools-basic {
+    display: flex;
+}
+
+.wrapper-tools-progress {
+    display: flex;
+    flex-grow: 100;
+    padding: 0 5px;
+}
+
+.wrapper-tools-volume {
+    display: flex;
+    width: 125px;
+    margin: 0 5px 0 auto;
+}
+
+
 #volume {
-    min-width: 50px;
-    /* width: 15%; */
+    width: 100%;
 }
 
 .tools i {
