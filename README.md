@@ -1,5 +1,5 @@
 # yqni13 WEB_music
-$\texttt{\color{teal}{v1.4.0}}$
+$\texttt{\color{teal}{v1.5.0}}$
 
 <br>
 
@@ -113,11 +113,12 @@ Play or Pause button hide/appear depending on actively playing a song. The skip 
 ## Updates
 
 [list of all updates](docs/update_protocol.md)
-### $\textsf{last\ update\ 1.1.3\ >>\ {\color{pink}1.4.0}}$
+### $\textsf{last\ update\ 1.1.3\ >>\ {\color{pink}1.5.0}}$
 
-- $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding.
+- $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding/width.
 - $\textsf{\color{green}Change:}$ Added new background.
 - $\textsf{\color{green}Change:}$ Added responsive design.
+- $\textsf{\color{green}Change:}$ Added new placeholder thumbnail and more consistent coloring.
 
 <br>
 
@@ -126,6 +127,7 @@ Play or Pause button hide/appear depending on actively playing a song. The skip 
     <dd>- error handling for music failing to load</dd>
     <dd>- error handling for thumbnails failing to load</dd>
     <dd>- enable removing single songs from list via trashbin icon</dd>
+    <dd>- deploy a Web Application Manifest to make application a progressive web app (PWA) </dd>
 </dl>
 
 <br>

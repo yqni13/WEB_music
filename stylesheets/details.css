@@ -1,4 +1,16 @@
 
+.details {
+    aspect-ratio: 2 / 1;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--glassoptic-color);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+}
+
 .list {
     display: flex;
     flex-direction: column;
@@ -32,7 +44,7 @@
 }
 
 #musicList a {
-    color: grey;
+    color: var(--glassoptic-color);
     width: -webkit-fill-available;
     width: -moz-available;
     width: fill-available;
@@ -40,6 +52,25 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+li {
+    color: var(--ghost-white);
+    border-style: solid;
+    border-color: var(--glassoptic-color);
+    border-radius: 2px;
+    margin: 3px 0px;
+    padding-top: 5px;
+    display: flex;
+}
+
+li i {
+    height: 18px;
+}
+
+li i:nth-of-type(2):hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
 
 .selector {
@@ -53,28 +84,27 @@
     position: relative;
 }
 
-#btn {
-    position: absolute;
-    z-index: -1;
-    top:10px;
-    left: 8px;
-    font-size:10px;
-    color: #b8b8b8;
-    visibility: hidden;
-}
-
 .btnlabel {
     display: inline-block;
-    width:95%;
+    width: calc(100% - 20px);
     height: 94%;
     align-content: center;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     border-style: outset;
     border-color: var(--ghost-white);
     background-color: var(--glassoptic-color);
     font-size: 20px;
     color: rgba(255, 255, 255, 0.76);
+}
+
+#btn {
+    position: absolute;
+    z-index: -1;
+    top:10px;
+    left: 8px;
+    color: #b8b8b8;
+    visibility: hidden;
 }
 
 .active {
@@ -98,21 +128,19 @@
     width: var(--detail-width);
     aspect-ratio: 1 / 1;
     margin-top: 10px;
-    background-image: url("../assets/not_available.jpg");
-    background-size: cover;
+    background-image: url("../assets/images/happy-music.svg");
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.7;
-    border-style: solid;
-    border-color: var(--ghost-white);
+    border: solid var(--glassoptic-color) 1px;
     border-radius: 2px;
 }
 
 .title {
     color: var(--ghost-white);
     width: var(--detail-width);
-    border-style: solid;
-    border-color: var(--glassoptic-color);
+    border: solid var(--glassoptic-color) 1px;
     border-radius: 2px;
     height: auto;
     margin-top: 5%;

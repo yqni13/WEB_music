@@ -1,8 +1,4 @@
 @media screen and (width >= 1440px) {
-    .player {
-        width: 60%!important;
-    }
-
     .details {
         .list {
             ul {
@@ -33,7 +29,7 @@
 
     .active {
         .title span {
-            font-size: 1.4vw!important;
+            font-size: 18px!important;
         }
         .song-data span {
             font-size: 1.3vw!important;
@@ -60,10 +56,11 @@
     }
 
     .active {
-        .song-data {
-            span {
-                font-size: 1.5vw!important;
-            }
+        .title span {
+            font-size: 16px!important;
+        }
+        .song-data span{
+            font-size: 1.5vw!important;
         }
         .clear {
             a {
@@ -74,6 +71,12 @@
 }
 
 @media screen and (width <= 650px) {
+    .active {
+        .title span {
+            font-size: 14px!important;
+        }
+    }
+    
     .details {
         .list {
             ul {
@@ -109,22 +112,19 @@
         aspect-ratio: 1 / 1!important;
 
         .list {
+            order: 2!important;
+            margin: 2.5px 0!important;
+            width: calc(100% - 10px)!important;
             ul {
                 li {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
             }
         }
-
-        .list {
-            order: 2!important;
-            margin: 2.5px 0!important;
-            width: 100%!important;
-        }
         .active {
             order: 1!important;
-            margin: 2.5px 0!important;
-            width: 100%!important;
+            margin: 2.5px!important;
+            width: calc(100% - 10px)!important;
 
             #thumbnail {
                 width: var(--details-width);
@@ -135,6 +135,9 @@
             .title {
                 width: var(--details-width);
                 margin-top: 2.5px!important;
+                span {
+                    font-size: 16px!important;
+                }
             }
             
             .song-data {
@@ -195,6 +198,12 @@
 
     .btnlabel {
         font-size: 14px!important;
+    }
+
+    .active {
+        .title span {
+            font-size: 14px!important;
+        }
     }
 
     .tools {

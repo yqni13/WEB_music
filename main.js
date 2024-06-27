@@ -39,16 +39,19 @@ function loadMusic() {
     var selector = document.getElementById("selectorOverview");
     var musicList = document.getElementById("musicList");
     var removeAllBtn = document.getElementById("clearOverview");
+    var musicThumbnail = document.getElementById("thumbnail");
 
     if(music.length == 0) {
-        list.style.borderColor = 'transparent';
+        list.style.borderColor = "transparent";
         selector.style.display = "block";
+        musicThumbnail.style.backgroundSize = "contain";
         musicList.style.display = "none";
         removeAllBtn.style.visibility = "hidden";
         document.getElementById("tools-inactive").style.display = "block";
     } else {
         list.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--yqni13-purple');
         selector.style.display = "none";
+        musicThumbnail.style.backgroundSize = "cover";
         musicList.style.display = "flex";
         removeAllBtn.style.visibility = "visible";
         displayedTime.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ghost-white');

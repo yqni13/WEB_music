@@ -4,11 +4,12 @@
 
 <br>
 
-### 2024/6/26 - $\textsf{update\ 1.1.3\ {\footnotesize{>>}}\ {\color{pink}1.4.0}}$
+### 2024/6/26 - $\textsf{update\ 1.1.3\ {\footnotesize{>>}}\ {\color{pink}1.5.0}}$
 
-- $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding.
+- $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding/width.
 - $\textsf{\color{green}Change:}$ Added new background.
 - $\textsf{\color{green}Change:}$ Added responsive design.
+- $\textsf{\color{green}Change:}$ Added new placeholder thumbnail and more consistent coloring.
 
 ### 2024/6/6 - $\textsf{update\ 1.0.0\ {\footnotesize{>>}}\ {\color{pink}1.1.3}}$
 

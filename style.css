@@ -22,71 +22,20 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    /* TODO set global font-size? */
 }
 
 .player {
     width: 60vw;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: var(--glassoptic-black);
     border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+    border: 1px solid var(--glassoptic-color);
     margin: auto;
 }
 
-.details {
-    aspect-ratio: 2 / 1;
-    border-style: solid;
-    border-width: 1px;
-    border-color: grey;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    margin: 10px;
-    padding: 5px;
-    display: flex;
-}
 
-.tools {
-    display: flex;
-    flex-wrap: wrap;
-    height: 20px;
-    border: solid grey 1px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    margin: 10px;
-    padding: 10px;
-    font-size: 24px;
-}
 
-#tools-inactive {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    background-color: transparent;
-    padding: 30px;
-    width: -webkit-fill-available;
-    z-index: 101;
-}
 
-li {
-    color: var(--ghost-white);
-    border-style: solid;
-    border-color: var(--glassoptic-color);
-    border-radius: 2px;
-    margin: 3px 0px;
-    padding-top: 5px;
-    display: flex;
-}
 
-li i {
-    height: 18px;
-}
 
-li i:nth-of-type(2):hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
