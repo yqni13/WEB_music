@@ -215,8 +215,8 @@ function resetPlayer() {
     
     // thumbnail, title rotation and time values visually reset
     document.getElementById("tools-inactive").style.display = "block";
-    displayedThumbnail.style.backgroundImage = "./assets/not_available.jpg";
-    displayedThumbnail.style.backgroundImage = 'url(./assets/not_available.jpg)'
+    displayedThumbnail.style.backgroundImage = 'url(./assets/images/happy-music.svg)'
+    displayedThumbnail.style.backgroundSize = 'contain';
     displayedTime.innerHTML = "";
     displayedTime.style.color = "transparent";
     displayedDuration.innerHTML = "";
