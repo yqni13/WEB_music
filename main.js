@@ -3,7 +3,7 @@ var user = "yqni13";
 var music = [];
 
 function initializePlayer() {
-    document.getElementById("browser-title").innerHTML = `${user} music player`;
+    document.getElementById("browser-title").textContent = `${user} music player`;
     pauseButton.style.display = "none";
     document.getElementById("progress").value = 0;
     volumeOff.style.display = "none"
@@ -77,7 +77,7 @@ function createMusicListElements(musicElements) {
         li.setAttribute("id", `title${musicElements[i].number}`)
 
         iDrag.setAttribute("class", "icon-MusicNote"); 
-        title.innerHTML = musicElements[i].name.substring(-1, musicElements[i].name.indexOf('.'));
+        title.textContent = musicElements[i].name.substring(-1, musicElements[i].name.indexOf('.'));
         iRemove.setAttribute("class", "icon-TrashBin");
 
         li.append(iDrag, title, iRemove)

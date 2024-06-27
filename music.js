@@ -75,8 +75,8 @@ function loadSong(musicNumber) {
     title.style.color = getComputedStyle(document.documentElement).getPropertyValue('--slider-range-color')
     
     // doubled title for infinity rotation
-    displayedTitle1.innerHTML = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
-    displayedTitle2.innerHTML = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
+    displayedTitle1.textContent = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
+    displayedTitle2.textContent = music[musicNumber].name.substring(-1, music[musicNumber].name.indexOf('.')) + " |&nbsp;"
 
     // default volume setting at start
     if (firstTrack) {
@@ -86,11 +86,11 @@ function loadSong(musicNumber) {
 
     // duration of audio object can only be loaded from metadata
     audio.addEventListener("loadedmetadata", () => {
-        displayedDuration.innerHTML = getSongTimeFormatted(audio.duration);
+        displayedDuration.textContent = getSongTimeFormatted(audio.duration);
         totalTime = audio.duration;
     })
     audio.addEventListener("timeupdate", () => {
-        displayedTime.innerHTML = getSongTimeFormatted(audio.currentTime);
+        displayedTime.textContent = getSongTimeFormatted(audio.currentTime);
         // first try totalTime equals 0 which leads to irregular jump of slider
         if(totalTime != 0) progressSlider.value = Math.floor((audio.currentTime / totalTime)*100)
     })
@@ -193,9 +193,7 @@ function updateSongProgress(timeVal) {
     document.getElementById("currentAudio").currentTime = (timeVal*totalTime)/100;
 }
 
-function getRandomSongNumber() {
-    return Math.floor(Math.random() * (music.length-1));
-}
+const getRandomSongNumber = () => Math.floor(Math.random() * (music.length-1));
 
 function getSongTimeFormatted(time) {
     const h = Math.floor(time / 3600).toString().padStart(2, '0'),
@@ -217,10 +215,10 @@ function resetPlayer() {
     document.getElementById("tools-inactive").style.display = "block";
     displayedThumbnail.style.backgroundImage = 'url(./assets/images/happy-music.svg)'
     displayedThumbnail.style.backgroundSize = 'contain';
-    displayedTime.innerHTML = "";
+    displayedTime.textContent = "";
     displayedTime.style.color = "transparent";
-    displayedDuration.innerHTML = "";
+    displayedDuration.textContent = "";
     displayedDuration.style.color = "transparent";
-    displayedTitle1.innerHTML = "no music selected |&nbsp;";
-    displayedTitle2.innerHTML = "no music selected |&nbsp;";
+    displayedTitle1.textContent = "no music selected |&nbsp;";
+    displayedTitle2.textContent = "no music selected |&nbsp;";
 }
