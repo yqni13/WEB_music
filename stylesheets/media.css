@@ -1,0 +1,226 @@
+@media screen and (width >= 1440px) {
+    .details {
+        .list {
+            ul {
+                li {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width < 1440px) {
+    .details {
+        .list {
+            ul {
+                li {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width <= 1024px) {
+    .player {
+        width: 70vw!important; 
+    }
+
+    .active {
+        .title span {
+            font-size: 18px!important;
+        }
+        .song-data span {
+            font-size: 1.3vw!important;
+        }
+        .clear a {
+            font-size: 2vw!important;
+        }
+    }
+}
+
+@media screen and (width <= 768px) {
+    .player {
+        width: 85vw!important;
+    }
+
+    .details {
+        .list {
+            ul {
+                li {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .active {
+        .title span {
+            font-size: 16px!important;
+        }
+        .song-data span{
+            font-size: 1.5vw!important;
+        }
+        .clear {
+            a {
+                font-size: 16px!important;
+            }
+        }
+    }
+}
+
+@media screen and (width <= 650px) {
+    .active {
+        .title span {
+            font-size: 14px!important;
+        }
+    }
+    
+    .details {
+        .list {
+            ul {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .btnlabel {
+        font-size: 18px!important;
+    }
+
+    .tools {
+        font-size: 4vw!important;
+    }
+}
+@media screen and (width <= 500px) {
+    :root {
+        --details-width: 50%!important;
+    }
+
+    .player {
+        width: 60vw!important;
+    }
+    
+    .details {
+        flex-direction: row!important;
+        flex-wrap: wrap;
+        justify-content: center!important;
+        width: auto!important;
+        aspect-ratio: 1 / 1!important;
+
+        .list {
+            order: 2!important;
+            margin: 2.5px 0!important;
+            width: calc(100% - 10px)!important;
+            ul {
+                li {
+                    font-size: 14px;
+                }
+            }
+        }
+        .active {
+            order: 1!important;
+            margin: 2.5px!important;
+            width: calc(100% - 10px)!important;
+
+            #thumbnail {
+                width: var(--details-width);
+                aspect-ratio: 1 / 1;
+                margin-top: 5px!important;
+            }
+            
+            .title {
+                width: var(--details-width);
+                margin-top: 2.5px!important;
+                span {
+                    font-size: 16px!important;
+                }
+            }
+            
+            .song-data {
+                width: var(--details-width);
+                margin: 2.5px 0 15px 0!important;
+                span {
+                    font-size: 2.5vw!important;
+                }
+            }
+
+            .clear {
+                a {
+                    font-size: 2.75vw!important;
+                }
+                i {
+                    font-size: 18px!important;
+                }
+            }
+        }
+    }
+
+    .btnlabel {
+        font-size: 16px!important;
+    }
+
+    .tools {
+        height: 50px!important;
+        font-size: 4.5vw!important;
+
+        .wrapper-tools-basic {
+            order: 1;
+            width: 45%!important;
+        }
+        .wrapper-tools-progress {
+            order: 3;
+            input {
+                bottom: 3.5px!important;
+            }
+        }
+        .wrapper-tools-volume {
+            order: 2;
+            width: 50%!important;
+            input {
+                bottom: 8.5px!important;
+            }
+        }
+    }
+
+    #tools-inactive {
+        padding: 45px!important;
+    }
+
+}
+@media screen and (width <= 400px) {
+    .player {
+        width: 70vw!important;
+    }
+
+    .btnlabel {
+        font-size: 14px!important;
+    }
+
+    .active {
+        .title span {
+            font-size: 14px!important;
+        }
+    }
+
+    .tools {
+        font-size: 5.2vw!important;
+        .wrapper-tools-volume {
+            input {
+                bottom:10px!important;
+            }
+        }
+    }
+}
+@media screen and (width <= 300px) {
+    .player {
+        width: 85vw!important;
+    }
+
+    .tools {
+        font-size: 6vw!important;
+    }
+}
