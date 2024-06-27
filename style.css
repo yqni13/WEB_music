@@ -1,30 +1,9 @@
 @import url("stylesheets/icons.css");
 @import url("stylesheets/tools.css");
 @import url("stylesheets/details.css");
+@import url("stylesheets/colors.css");
+@import url("stylesheets/media.css");
 
-    
-:root {
-    --shuffle-color: #00AAFF;
-    --repeat-color: #77B300;
-    --btn-color: #E61291;
-    --slider-range-color: #ff96ab;
-    --slider-btn-color: #CCFFEE;
-    --glassoptic-color: rgba(255, 255, 255, 0.25);
-    --yqni13-purple: #650d88;
-    --yqni13-pink: #bc0c79;
-
-    /* white type colors */
-    --snow-white: #FFFAFA;
-    --ghost-white: #F8F8FF;
-    --alice-blue: #F0F8FF;
-    --antiflesh-white: #FAFAFA;
-    --gainsboro-white: #F1EFF2;
-    --off-white: #FBFBFB;
-    --ivory-white: #FFFFF0;
-
-    /* most used measurements */
-    --detail-width: 53%;
-}
 
 html, body {
     height: 100%;
@@ -32,82 +11,31 @@ html, body {
 }
 
 body {
-    background-image: url("assets/withBackground.svg");
-    background-color: #0d1117;
-    background-size: contain;
+    background-image: url(assets/images/grid-pattern-bg.png);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     align-content: center;
+    margin: 0!important;
 
     cursor: default;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    /* TODO set global font-size? */
 }
 
 .player {
-    width:fit-content;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+    width: 60vw;
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: var(--glassoptic-black);
+    border-radius: 25px;
+    border: 1px solid var(--glassoptic-color);
     margin: auto;
 }
 
-.details {
-    width: 600px;
-    height: 300px;
-    border-style: solid;
-    border-width: medium;
-    border-color: grey;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 5px;
-    display: flex;
-    position: relative;
-}
 
-.tools {
-    height: 20px;
-    border-style: solid;
-    border-color: grey;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 5px 5px 0px 5px;
-    align-content: center;
-}
 
-#tools-inactive {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    background-color: transparent;
-    padding: 15px;
-    width: -webkit-fill-available;
-    z-index: 101;
-}
 
-li {
-    color: var(--ghost-white);
-    border-style: solid;
-    border-color: var(--glassoptic-color);
-    border-radius: 2px;
-    margin: 3px 0px;
-    padding-top: 3px;
-    display: flex;
-}
 
-li i {
-    height: 18px;
-}
-
-li i:nth-of-type(2):hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
 

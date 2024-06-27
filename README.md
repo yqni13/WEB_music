@@ -1,11 +1,11 @@
-# yqni13 music player
-$\texttt{\color{teal}{v1.1.3}}$
+# yqni13 WEB_music
+$\texttt{\color{teal}{v1.5.0}}$
 
-## Screenshot - loaded
+<br>
 
-<img src="./assets/readme_img/player_loaded.png.jpg" alt="music player loaded">
-
-
+<div align="center">
+    <img src="./assets/readme_img/player_loaded.jpg" alt="music player loaded">
+</div>
 
 ### Technology 
 
@@ -15,6 +15,9 @@ $\texttt{\color{teal}{v1.1.3}}$
     <img alt="Javascript" src="https://img.shields.io/badge/-JavaScript-F0DB4F?style=flat&logo=javascript&logoColor=white">
     <img alt="Google Fonts" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2021%2F03%2FGoogle-Fonts-Logo.png&f=1&nofb=1&ipt=570b1eadbf10850285149faa90b47496e415ec5daf70efb973248c194025a6a5&ipo=images" style="height:auto; width:5%">Google Fonts
 </div>
+
+### <a href="https://yqni13.github.io/WEB_music/">TRY LIVE DEMO</a>
+
 <br>
 
 ## HOW TO:
@@ -26,10 +29,9 @@ $\texttt{\color{teal}{v1.1.3}}$
 5. Use the volume slider to increase/decrease the volume or the progress slider to navigate to your prefered time spot of a song.
 6. Currently single song elements can not be removed but only the complete list with the "clear list x" button, which removes the whole list and the "load pre-defined music" field re-appears.
 
-### <a href="https://yqni13.github.io/WEB_music/">!! TRY HERE LIVE !!</a>
 <br>
 
-## Functionality
+## Features
 
 ### Modes
 
@@ -73,37 +75,65 @@ Play or Pause button hide/appear depending on actively playing a song. The skip 
 
 ## Screenshot - cleared
 
-<img src="./assets/readme_img/player_preloaded.png.jpg" alt="music player cleared">
+<img src="./assets/readme_img/player_preloaded.jpg" alt="music player cleared">
 
 <p>
     Meanwhile the first idea was to enable the user to select music from local storage via audio input in html, this feature was dismissed. Javascript doesn't allow on client side to access user directories. This is only possible from server side to access and would exceed the scope of this side project. Therefore, this music player as well as seen in many other repositories, this music player will use pre-defined music elements.
 </p>
+<br><br>
+
+## Responsive design
+
+<div align="center">
+    <img src="./assets/readme_img/mobile-portrait-view.jpg" alt="music player mobile resolution">
+</div>
+
+<p>
+    New scaling for resolution 300px > width > 1440px in 8 different steps in combination with flexbox styling ensures a responsive design to use on every device. Starting with v1.4.0 there are two modes. Firstly, the basic landscape mode for tablets and desktop devices to offer a higher screenwidth. Secondly, a new portrait oriented design offers a better handling for smaller devices or window sizes.
+</p>
+
+<br>
+
+
+## Testing
+
+### Cross-browser testing
+
+<center>
+
+<img src="assets/favicon/firefox_logo50.ico"> | <img src="assets/favicon/chrome_logo50.ico"> | <img src="assets/favicon/opera_logo50.ico"> | <img src="assets/favicon/edge_logo50.ico"> | <img src="assets/favicon/duckduckgo_logo50.ico"> | <img src="assets/favicon/brave_logo50.ico">
+|:------:|:------:|:------:|:------:|:------:|:------:|
+|Firefox | Chrome | Opera  | Edge   | DuckGo | Brave  |
+|Yes     | Yes    | Yes    | Yes    | Yes    | Yes    |
+
+</center>
+
 <br>
 
 ## Updates
 
-### $\textsf{last\ update\ 1.0.0\ >>\ {\color{pink}1.1.3}}$
+[list of all updates](docs/update_protocol.md)
+### $\textsf{last\ update\ 1.1.3\ >>\ {\color{pink}1.5.0}}$
 
+- $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding/width.
+- $\textsf{\color{green}Change:}$ Added new background.
+- $\textsf{\color{green}Change:}$ Added responsive design.
+- $\textsf{\color{green}Change:}$ Added new placeholder thumbnail and more consistent coloring.
 
-- $\textsf{\color{orange}Change:}$ Cursor will change to pointer when hovering an icon with functionality to use (exception: active icons, that can not be activated again like shuffle/repeat mode).
-- $\textsf{\color{orange}Change:}$ Functionality on icons will be disabled as long as no music is loaded.</dd>
-- $\textsf{\color{orange}Change:}$ Clicking on the volume icon will either mute the music or reset to the previous volume.
-- $\textsf{\color{red}Bugfix:}$ Volume will stay for every upcoming song the same until manually changed. [Before: Volume was always reset to 50% when new song was loaded.]
-- $\textsf{\color{red}Bugfix:}$ Clicking on the volume icon will mute music and slider set to value 0% or back to previous volume. [Before: Slider was not updated when clicking on volume icon.]
-- $\textsf{\color{red}Bugfix:}$ Removing whole list of music disables functionality of any icons. [Before: Functionality of icons was not again disabled after removing list of loaded music.]
-<br><br>
+<br>
 
 ### Aimed objectives for next $\textsf{\color{green}minor}$ update:
 <dl>
     <dd>- error handling for music failing to load</dd>
     <dd>- error handling for thumbnails failing to load</dd>
     <dd>- enable removing single songs from list via trashbin icon</dd>
+    <dd>- deploy a Web Application Manifest to make application a progressive web app (PWA) </dd>
 </dl>
+
 <br>
 
 ### Aimed objectives for next $\textsf{\color{cyan}major}$ update:
 <dl>
     <dd>- load music from specified path (no more static data)</dd>
     <dd>- load metadata from music element and dispay (thumbnail, autor, genre, ...)</dd>
-    <dd>- responsive design</dd>
 </dl>

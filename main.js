@@ -8,6 +8,7 @@ function initializePlayer() {
     document.getElementById("progress").value = 0;
     volumeOff.style.display = "none"
     document.getElementById("tools-inactive").style.display = "block"; 
+    document.getElementById("musicList").style.display = "none";
 }
 
 function removeAll() {
@@ -22,8 +23,8 @@ function removeAll() {
     music = [];
     resetPlayer();
 
-    document.getElementById("selectorOverview").style.visibility = "visible";
-    document.getElementById("selectorOverview").style.height = "100%";
+    document.getElementById("selectorOverview").style.display = "block";
+    document.getElementById("musicList").style.display = "none";
     document.getElementById("listOverview").style.borderColor = 'transparent';
     document.getElementById("clearOverview").style.visibility = "hidden";
     shuffleButton.style.color = getComputedStyle(document.documentElement).getPropertyValue('--btn-color');
@@ -36,17 +37,22 @@ function loadMusic() {
     music = musicDB;
     var list = document.getElementById("listOverview");
     var selector = document.getElementById("selectorOverview");
+    var musicList = document.getElementById("musicList");
     var removeAllBtn = document.getElementById("clearOverview");
+    var musicThumbnail = document.getElementById("thumbnail");
 
     if(music.length == 0) {
-        list.style.borderColor = 'transparent';
-        selector.style.visibility = "visible";
+        list.style.borderColor = "transparent";
+        selector.style.display = "block";
+        musicThumbnail.style.backgroundSize = "contain";
+        musicList.style.display = "none";
         removeAllBtn.style.visibility = "hidden";
         document.getElementById("tools-inactive").style.display = "block";
     } else {
         list.style.borderColor = getComputedStyle(document.documentElement).getPropertyValue('--yqni13-purple');
-        selector.style.visibility = "hidden";
-        selector.style.height = "0%"
+        selector.style.display = "none";
+        musicThumbnail.style.backgroundSize = "cover";
+        musicList.style.display = "flex";
         removeAllBtn.style.visibility = "visible";
         displayedTime.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ghost-white');
         displayedDuration.style.color = getComputedStyle(document.documentElement).getPropertyValue('--ghost-white');
