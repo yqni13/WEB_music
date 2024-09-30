@@ -4,6 +4,10 @@
 
 <br>
 
+### 2024/9/30 - $\textsf{update\ 1.5.0\ {\footnotesize{>>}}\ {\color{pink}1.5.1}}$
+
+- $\textsf{\color{green}Change:}$ Refactored small performance/security improvements.
+
 ### 2024/6/26 - $\textsf{update\ 1.1.3\ {\footnotesize{>>}}\ {\color{pink}1.5.0}}$
 
 - $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding/width.
