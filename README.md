@@ -112,7 +112,7 @@ Play or Pause button hide/appear depending on actively playing a song. The skip 
 
 ## Updates
 
-[list of all updates](docs/update_protocol.md)
+[list of all updates](doc/update_protocol.md)
 ### $\textsf{last\ update\ 1.1.3\ >>\ {\color{pink}1.5.0}}$
 
 - $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding/width.
