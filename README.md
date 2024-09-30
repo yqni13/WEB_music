@@ -1,5 +1,5 @@
 # yqni13 WEB_music
-$\texttt{\color{teal}{v1.5.0}}$
+$\texttt{\color{teal}{v1.5.1}}$
 
 <br>
 
@@ -113,12 +113,9 @@ Play or Pause button hide/appear depending on actively playing a song. The skip 
 ## Updates
 
 [list of all updates](doc/update_protocol.md)
-### $\textsf{last\ update\ 1.1.3\ >>\ {\color{pink}1.5.0}}$
+### $\textsf{last\ update\ 1.5.0\ >>\ {\color{pink}1.5.1}}$
 
-- $\textsf{\color{green}Change:}$ Adapted all border radius regarding additional margin/padding/width.
-- $\textsf{\color{green}Change:}$ Added new background.
-- $\textsf{\color{green}Change:}$ Added responsive design.
-- $\textsf{\color{green}Change:}$ Added new placeholder thumbnail and more consistent coloring.
+- $\textsf{\color{green}Change:}$ Refactored small performance/security improvements.
 
 <br>
 
